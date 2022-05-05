@@ -31,7 +31,9 @@ namespace ProjetoMotorÉP
 
         private void Acessar_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            Menu mostrar = new Menu();
+            mostrar.Show();
         }
 
         private void Criar_Click(object sender, EventArgs e)
