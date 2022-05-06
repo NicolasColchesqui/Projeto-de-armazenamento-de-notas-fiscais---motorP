@@ -39,6 +39,11 @@ namespace ProjetoMotorÉP
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lsvConsultaDados = new System.Windows.Forms.ListView();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.txtbTotal = new System.Windows.Forms.TextBox();
+            this.txtbDeletar = new System.Windows.Forms.TextBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.btnDeletar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblConsultar
@@ -145,11 +150,60 @@ namespace ProjetoMotorÉP
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Location = new System.Drawing.Point(60, 483);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(166, 23);
+            this.btnAtualizar.TabIndex = 11;
+            this.btnAtualizar.Text = "Atualizar essa consulta";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // txtbTotal
+            // 
+            this.txtbTotal.Location = new System.Drawing.Point(703, 148);
+            this.txtbTotal.Name = "txtbTotal";
+            this.txtbTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtbTotal.TabIndex = 12;
+            this.txtbTotal.TextChanged += new System.EventHandler(this.txtbTotal_TextChanged);
+            // 
+            // txtbDeletar
+            // 
+            this.txtbDeletar.Location = new System.Drawing.Point(605, 483);
+            this.txtbDeletar.Name = "txtbDeletar";
+            this.txtbDeletar.Size = new System.Drawing.Size(100, 20);
+            this.txtbDeletar.TabIndex = 13;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(556, 486);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo.TabIndex = 14;
+            this.lblCodigo.Text = "Codigo:";
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Location = new System.Drawing.Point(740, 483);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletar.TabIndex = 15;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
             // Consultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 450);
+            this.ClientSize = new System.Drawing.Size(976, 560);
+            this.Controls.Add(this.btnDeletar);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.txtbDeletar);
+            this.Controls.Add(this.txtbTotal);
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.lsvConsultaDados);
             this.Controls.Add(this.btnConsultar);
@@ -179,5 +233,10 @@ namespace ProjetoMotorÉP
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.ListView lsvConsultaDados;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.TextBox txtbTotal;
+        private System.Windows.Forms.TextBox txtbDeletar;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Button btnDeletar;
     }
 }

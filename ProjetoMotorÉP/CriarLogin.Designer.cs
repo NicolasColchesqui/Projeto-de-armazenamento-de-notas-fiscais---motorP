@@ -32,18 +32,19 @@ namespace ProjetoMotorÉP
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CriarLogin));
             this.Label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxCriarUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxSenha2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxCriarSenha = new System.Windows.Forms.TextBox();
-            this.Criarlog = new System.Windows.Forms.Button();
+            this.txtbSenha = new System.Windows.Forms.TextBox();
             this.SenhaIncorretaMessage = new System.Windows.Forms.Label();
             this.CPFinco = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.txtbNome = new System.Windows.Forms.TextBox();
             this.NomeIncorreto = new System.Windows.Forms.Label();
+            this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
+            this.btnCadastrarUsuario = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,17 +70,6 @@ namespace ProjetoMotorÉP
             this.label2.Size = new System.Drawing.Size(48, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "CPF";
-            // 
-            // textBoxCriarUsuario
-            // 
-            this.textBoxCriarUsuario.BackColor = System.Drawing.Color.Silver;
-            this.textBoxCriarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxCriarUsuario.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxCriarUsuario.Location = new System.Drawing.Point(51, 236);
-            this.textBoxCriarUsuario.Name = "textBoxCriarUsuario";
-            this.textBoxCriarUsuario.Size = new System.Drawing.Size(323, 20);
-            this.textBoxCriarUsuario.TabIndex = 4;
-            this.textBoxCriarUsuario.TextChanged += new System.EventHandler(this.textBoxCriarUsuario_TextChanged);
             // 
             // label3
             // 
@@ -124,29 +114,17 @@ namespace ProjetoMotorÉP
             this.label4.TabIndex = 7;
             this.label4.Text = "Digite novamente a senha";
             // 
-            // textBoxCriarSenha
+            // txtbSenha
             // 
-            this.textBoxCriarSenha.BackColor = System.Drawing.Color.Silver;
-            this.textBoxCriarSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxCriarSenha.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxCriarSenha.Location = new System.Drawing.Point(51, 308);
-            this.textBoxCriarSenha.Name = "textBoxCriarSenha";
-            this.textBoxCriarSenha.Size = new System.Drawing.Size(323, 20);
-            this.textBoxCriarSenha.TabIndex = 8;
-            this.textBoxCriarSenha.TextChanged += new System.EventHandler(this.textBoxCriarSenha_TextChanged);
-            // 
-            // Criarlog
-            // 
-            this.Criarlog.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Criarlog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Criarlog.Font = new System.Drawing.Font("Romantic", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.Criarlog.Location = new System.Drawing.Point(51, 432);
-            this.Criarlog.Name = "Criarlog";
-            this.Criarlog.Size = new System.Drawing.Size(323, 50);
-            this.Criarlog.TabIndex = 9;
-            this.Criarlog.Text = "criar login";
-            this.Criarlog.UseVisualStyleBackColor = false;
-            this.Criarlog.Click += new System.EventHandler(this.Criarlog_Click);
+            this.txtbSenha.BackColor = System.Drawing.Color.Silver;
+            this.txtbSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbSenha.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtbSenha.Location = new System.Drawing.Point(51, 308);
+            this.txtbSenha.MaxLength = 8;
+            this.txtbSenha.Name = "txtbSenha";
+            this.txtbSenha.Size = new System.Drawing.Size(323, 20);
+            this.txtbSenha.TabIndex = 8;
+            this.txtbSenha.TextChanged += new System.EventHandler(this.textBoxCriarSenha_TextChanged);
             // 
             // SenhaIncorretaMessage
             // 
@@ -185,15 +163,17 @@ namespace ProjetoMotorÉP
             this.label5.TabIndex = 12;
             this.label5.Text = "Nome Completo";
             // 
-            // textBoxNome
+            // txtbNome
             // 
-            this.textBoxNome.BackColor = System.Drawing.Color.Silver;
-            this.textBoxNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxNome.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBoxNome.Location = new System.Drawing.Point(51, 160);
-            this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(323, 20);
-            this.textBoxNome.TabIndex = 13;
+            this.txtbNome.BackColor = System.Drawing.Color.Silver;
+            this.txtbNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbNome.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtbNome.Location = new System.Drawing.Point(51, 160);
+            this.txtbNome.MaxLength = 45;
+            this.txtbNome.Name = "txtbNome";
+            this.txtbNome.Size = new System.Drawing.Size(323, 20);
+            this.txtbNome.TabIndex = 13;
+            this.txtbNome.TextChanged += new System.EventHandler(this.txtbNome_TextChanged);
             // 
             // NomeIncorreto
             // 
@@ -207,23 +187,52 @@ namespace ProjetoMotorÉP
             this.NomeIncorreto.Text = "Nome ja utilizado, Digite outro";
             this.NomeIncorreto.Visible = false;
             // 
+            // mtbCPF
+            // 
+            this.mtbCPF.Location = new System.Drawing.Point(51, 237);
+            this.mtbCPF.Mask = "000.000.000-00";
+            this.mtbCPF.Name = "mtbCPF";
+            this.mtbCPF.Size = new System.Drawing.Size(323, 20);
+            this.mtbCPF.TabIndex = 15;
+            // 
+            // btnCadastrarUsuario
+            // 
+            this.btnCadastrarUsuario.Location = new System.Drawing.Point(53, 435);
+            this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
+            this.btnCadastrarUsuario.Size = new System.Drawing.Size(166, 20);
+            this.btnCadastrarUsuario.TabIndex = 16;
+            this.btnCadastrarUsuario.Text = "Cadastrar Usuario";
+            this.btnCadastrarUsuario.UseVisualStyleBackColor = true;
+            this.btnCadastrarUsuario.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(212, 476);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(140, 23);
+            this.btnLogin.TabIndex = 17;
+            this.btnLogin.Text = "Tela de login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // CriarLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(414, 542);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnCadastrarUsuario);
+            this.Controls.Add(this.mtbCPF);
             this.Controls.Add(this.NomeIncorreto);
-            this.Controls.Add(this.textBoxNome);
+            this.Controls.Add(this.txtbNome);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CPFinco);
             this.Controls.Add(this.SenhaIncorretaMessage);
-            this.Controls.Add(this.Criarlog);
-            this.Controls.Add(this.textBoxCriarSenha);
+            this.Controls.Add(this.txtbSenha);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxSenha2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxCriarUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.pictureBox1);
@@ -244,16 +253,17 @@ namespace ProjetoMotorÉP
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxCriarUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxSenha2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxCriarSenha;
-        private System.Windows.Forms.Button Criarlog;
+        private System.Windows.Forms.TextBox txtbSenha;
         private System.Windows.Forms.Label SenhaIncorretaMessage;
         private System.Windows.Forms.Label CPFinco;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxNome;
+        private System.Windows.Forms.TextBox txtbNome;
         private System.Windows.Forms.Label NomeIncorreto;
+        private System.Windows.Forms.MaskedTextBox mtbCPF;
+        private System.Windows.Forms.Button btnCadastrarUsuario;
+        private System.Windows.Forms.Button btnLogin;
     }
 }

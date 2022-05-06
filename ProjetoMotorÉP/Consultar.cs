@@ -16,6 +16,10 @@ namespace ProjetoMotorÉP
     {
         MySqlConnection conexao;
 
+        public string total;
+        public string atualizacao;
+        public int validacao = 0;
+
         public string CNPJ;
         public string mes;
         public byte situacao;
@@ -105,6 +109,8 @@ namespace ProjetoMotorÉP
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            validacao = 1;//variavel que habilita o funcionamento do botao "atualizar consulta"
+
             CNPJ = txtbCNPJ.Text;
             mes = Convert.ToString(cmbMes.SelectedItem);
 
@@ -118,11 +124,13 @@ namespace ProjetoMotorÉP
             }
 
             ConsultarDados();
+            valorTotal();
+
         }//fim do botão Consultar 
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            
+    
         }//fim do botão mostrar
 
         private void btnVoltar_Click_1(object sender, EventArgs e)
@@ -130,6 +138,80 @@ namespace ProjetoMotorÉP
             this.Visible = false;
             Menu mostrar = new Menu();
             mostrar.Show();
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            if (validacao == 1)
+            {
+
+                MessageBox.Show("Você tem certeza que deseja realizar essa operação?", "Aviso", MessageBoxButtons.YesNo);
+
+                var msg = MessageBox.Show("Você tem certeza que deseja realizar essa operação?", "Aviso", MessageBoxButtons.YesNo);
+
+                if (msg == DialogResult.Yes)
+                {
+                    CNPJ = txtbCNPJ.Text;
+                    mes = Convert.ToString(cmbMes.SelectedItem);
+
+                    if ((Convert.ToString(cmbSituacao.SelectedItem) == "Pendente"))
+                    {
+                        atualizacao = "update telaPrincipal set situacao = '0' where (CNPJ = " + CNPJ + ") and (mes =" + mes +
+                                        ") and (situacao =" + situacao + ")";
+                        MySqlCommand atual = new MySqlCommand(atualizacao, conexao);
+                        atualizacao = "" + atual.ExecuteNonQuery();
+                        MessageBox.Show("Nota atualizada!");
+                    }//fim da atualização
+                }//fim da ação de atualização em caso positivo
+                if (msg == DialogResult.No)
+                {
+                    Consultar mostrar = new Consultar();
+                    mostrar.Show();
+                }//fim da ação que encerra o textbox
+            }//fim da condição necessária para atualizar o dado
+
+            validacao = 0;
+        }//fim do botão atualizar
+
+        private void valorTotal()//Joga a soma da coluna preço em um textBox
+        {
+            string funcao = "select SUM(valorTotalProduto) AS total FROM telaPrincipal where(CNPJ = " + CNPJ + ") and (mes = " + mes + ") and (situacao = " +
+                                situacao + ")";
+
+            MySqlCommand comando = new MySqlCommand(funcao, conexao);
+
+            MySqlDataReader valorTotal = comando.ExecuteReader();
+
+            while (valorTotal.Read())
+            {
+                total = Convert.ToString(valorTotal["total"]);
+            }
+
+            valorTotal.Close();
+
+            txtbTotal.Text = Convert.ToString(total);
+        }//fim do método valorTotal
+
+        private void Deletar()//deleta da base de dados TODA uma linha de acordo com o código
+        {
+
+            string funcao = "delete from telaPrincipal where codigo =" + txtbDeletar.Text + "";
+
+            MySqlCommand comando = new MySqlCommand(funcao, conexao);
+
+            funcao = "" + comando.ExecuteNonQuery();
+
+            MessageBox.Show("Linha deletada com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }//fim do método deletar linha
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            Deletar();
+        }//fim do botão deletar
+
+        private void txtbTotal_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }//fim da classe
 }//fim do projeto

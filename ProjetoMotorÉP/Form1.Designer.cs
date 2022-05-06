@@ -33,9 +33,9 @@ namespace ProjetoMotorÉP
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxUsuario = new System.Windows.Forms.TextBox();
+            this.txtbUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxSenha = new System.Windows.Forms.TextBox();
+            this.txtbSenha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Acessar = new System.Windows.Forms.Button();
             this.Criar = new System.Windows.Forms.Button();
@@ -75,15 +75,16 @@ namespace ProjetoMotorÉP
             this.label2.TabIndex = 2;
             this.label2.Text = "CPF";
             // 
-            // textBoxUsuario
+            // txtbUsuario
             // 
-            this.textBoxUsuario.BackColor = System.Drawing.Color.Silver;
-            this.textBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxUsuario.Location = new System.Drawing.Point(116, 153);
-            this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.Size = new System.Drawing.Size(279, 20);
-            this.textBoxUsuario.TabIndex = 3;
-            this.textBoxUsuario.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
+            this.txtbUsuario.BackColor = System.Drawing.Color.Silver;
+            this.txtbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbUsuario.Location = new System.Drawing.Point(116, 153);
+            this.txtbUsuario.MaxLength = 11;
+            this.txtbUsuario.Name = "txtbUsuario";
+            this.txtbUsuario.Size = new System.Drawing.Size(279, 20);
+            this.txtbUsuario.TabIndex = 3;
+            this.txtbUsuario.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
             // 
             // label3
             // 
@@ -96,16 +97,17 @@ namespace ProjetoMotorÉP
             this.label3.TabIndex = 4;
             this.label3.Text = "Senha";
             // 
-            // textBoxSenha
+            // txtbSenha
             // 
-            this.textBoxSenha.BackColor = System.Drawing.Color.Silver;
-            this.textBoxSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxSenha.Font = new System.Drawing.Font("MS Outlook", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.textBoxSenha.Location = new System.Drawing.Point(116, 203);
-            this.textBoxSenha.Name = "textBoxSenha";
-            this.textBoxSenha.Size = new System.Drawing.Size(279, 19);
-            this.textBoxSenha.TabIndex = 5;
-            this.textBoxSenha.TextChanged += new System.EventHandler(this.textBoxSenha_TextChanged);
+            this.txtbSenha.BackColor = System.Drawing.Color.Silver;
+            this.txtbSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbSenha.Font = new System.Drawing.Font("MS Outlook", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.txtbSenha.Location = new System.Drawing.Point(116, 203);
+            this.txtbSenha.MaxLength = 8;
+            this.txtbSenha.Name = "txtbSenha";
+            this.txtbSenha.Size = new System.Drawing.Size(279, 19);
+            this.txtbSenha.TabIndex = 5;
+            this.txtbSenha.TextChanged += new System.EventHandler(this.textBoxSenha_TextChanged);
             // 
             // label4
             // 
@@ -164,9 +166,9 @@ namespace ProjetoMotorÉP
             this.Controls.Add(this.Criar);
             this.Controls.Add(this.Acessar);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxSenha);
+            this.Controls.Add(this.txtbSenha);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxUsuario);
+            this.Controls.Add(this.txtbUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.pictureBox1);
@@ -186,9 +188,9 @@ namespace ProjetoMotorÉP
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxUsuario;
+        private System.Windows.Forms.TextBox txtbUsuario;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxSenha;
+        private System.Windows.Forms.TextBox txtbSenha;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Acessar;
         private System.Windows.Forms.Button Criar;
