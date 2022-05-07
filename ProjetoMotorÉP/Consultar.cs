@@ -48,7 +48,6 @@ namespace ProjetoMotorÉP
             lsvConsultaDados.Columns.Add("precoUnitario", 100, HorizontalAlignment.Left);
             lsvConsultaDados.Columns.Add("quantidade", 100, HorizontalAlignment.Left);
             lsvConsultaDados.Columns.Add("valorTotalProduto", 100, HorizontalAlignment.Left);
-            lsvConsultaDados.Columns.Add("situacao", 80, HorizontalAlignment.Left);
 
             conexao = new MySqlConnection("server=localhost;DataBase=notaConsumidor;Uid=root;password=;");
             try
@@ -89,7 +88,6 @@ namespace ProjetoMotorÉP
                         ler.GetString(7),
                         ler.GetString(8),
                         ler.GetString(9),
-                        ler.GetString(10),
                     };
 
                     var linha_view = new ListViewItem(linha);
@@ -109,23 +107,29 @@ namespace ProjetoMotorÉP
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            validacao = 1;//variavel que habilita o funcionamento do botao "atualizar consulta"
-
-            CNPJ = txtbCNPJ.Text;
-            mes = Convert.ToString(cmbMes.SelectedItem);
-
-            if (Convert.ToString(cmbSituacao.SelectedItem) == "Pendente")
+            if (txtbCNPJ.Text == "")//impede o erro caso o campo esteja vazio
             {
-                situacao = 1;
+                MessageBox.Show("Preencha todos os campos para realizar a consulta!");
             }
             else
             {
-                situacao = 0;
-            }
+                validacao = 1;//variavel que habilita o funcionamento do botao "atualizar consulta"
 
-            ConsultarDados();
-            valorTotal();
+                CNPJ = txtbCNPJ.Text;
+                mes = Convert.ToString(cmbMes.SelectedItem);
 
+                if (Convert.ToString(cmbSituacao.SelectedItem) == "Pendente")
+                {
+                    situacao = 1;
+                }
+                else
+                {
+                    situacao = 0;
+                }
+
+                ConsultarDados();
+                valorTotal();
+            }//fim da validação consulta
         }//fim do botão Consultar 
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -194,14 +198,20 @@ namespace ProjetoMotorÉP
 
         private void Deletar()//deleta da base de dados TODA uma linha de acordo com o código
         {
+            if(txtbDeletar.Text == "")//impede o erro caso o campo esteja vazio
+            {
+                MessageBox.Show("Preencha o campo que deseja deletar!");
+            }
+            else
+            {
+                string funcao = "delete from telaPrincipal where codigo =" + txtbDeletar.Text + "";
 
-            string funcao = "delete from telaPrincipal where codigo =" + txtbDeletar.Text + "";
+                MySqlCommand comando = new MySqlCommand(funcao, conexao);
 
-            MySqlCommand comando = new MySqlCommand(funcao, conexao);
+                funcao = "" + comando.ExecuteNonQuery();
 
-            funcao = "" + comando.ExecuteNonQuery();
-
-            MessageBox.Show("Linha deletada com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Linha deletada com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }//fim da validação 
         }//fim do método deletar linha
 
         private void btnDeletar_Click(object sender, EventArgs e)

@@ -80,10 +80,17 @@ namespace ProjetoMotorÉP
 
         private void Acessar_Click(object sender, EventArgs e)
         {
-            usuario = Convert.ToInt64(txtbUsuario.Text);
-            senha = txtbSenha.Text;
-            verificarAcesso();
-        }
+            if ((txtbUsuario.Text == "") || (txtbSenha.Text == ""))
+            {
+                MessageBox.Show("Preencha todos os campos para acessar o sistema!");
+            }
+            else
+            {
+                usuario = Convert.ToInt64(txtbUsuario.Text);
+                senha = txtbSenha.Text;
+                verificarAcesso();
+            }//fim da validação        
+        }//fim do botão acessar
 
         private void Criar_Click(object sender, EventArgs e)
         {

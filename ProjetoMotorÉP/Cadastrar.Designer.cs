@@ -51,7 +51,6 @@ namespace ProjetoMotorÉP
             this.txtbValorTotalProduto = new System.Windows.Forms.TextBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.lblSituacao = new System.Windows.Forms.Label();
-            this.lblValorTotalNota = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -238,16 +237,6 @@ namespace ProjetoMotorÉP
             this.lblSituacao.TabIndex = 21;
             this.lblSituacao.Text = "Situação";
             // 
-            // lblValorTotalNota
-            // 
-            this.lblValorTotalNota.AutoSize = true;
-            this.lblValorTotalNota.Location = new System.Drawing.Point(50, 297);
-            this.lblValorTotalNota.Name = "lblValorTotalNota";
-            this.lblValorTotalNota.Size = new System.Drawing.Size(84, 13);
-            this.lblValorTotalNota.TabIndex = 23;
-            this.lblValorTotalNota.Text = "Valor Total Nota";
-            this.lblValorTotalNota.Click += new System.EventHandler(this.label1_Click);
-            // 
             // btnVoltar
             // 
             this.btnVoltar.Location = new System.Drawing.Point(35, 377);
@@ -264,7 +253,6 @@ namespace ProjetoMotorÉP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.lblValorTotalNota);
             this.Controls.Add(this.lblSituacao);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.txtbValorTotalProduto);
@@ -318,7 +306,6 @@ namespace ProjetoMotorÉP
         private System.Windows.Forms.TextBox txtbValorTotalProduto;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label lblSituacao;
-        private System.Windows.Forms.Label lblValorTotalNota;
         private System.Windows.Forms.Button btnVoltar;
     }
 }

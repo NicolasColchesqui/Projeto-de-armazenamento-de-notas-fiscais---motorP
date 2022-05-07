@@ -162,7 +162,8 @@ namespace ProjetoMotorÉP
             // 
             // txtbTotal
             // 
-            this.txtbTotal.Location = new System.Drawing.Point(703, 148);
+            this.txtbTotal.Enabled = false;
+            this.txtbTotal.Location = new System.Drawing.Point(605, 149);
             this.txtbTotal.Name = "txtbTotal";
             this.txtbTotal.Size = new System.Drawing.Size(100, 20);
             this.txtbTotal.TabIndex = 12;
