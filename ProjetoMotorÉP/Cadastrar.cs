@@ -30,6 +30,7 @@ namespace ProjetoMotorÉP
         public double valorTotalProduto = 0;
         public double valorTotalNota = 0;
         public byte situacao;
+        public string imagem;
 
         public Cadastrar()
         {
@@ -53,9 +54,9 @@ namespace ProjetoMotorÉP
             try
             {
                 dados = "('','" + CNPJ + "','" + fornecedor + "','" + dia + "','" + mes + "','" + ano + "','" + nomeProduto +
-                    "','" + precoUnitario + "','" + quantidade + "','" + valorTotalProduto + "','" + situacao + "')";
+                    "','" + precoUnitario + "','" + quantidade + "','" + valorTotalProduto + "','" + situacao + "','" + imagem + "')";
                 comando = "insert into telaPrincipal(codigo, CNPJ, fornecedor, dia, mes, ano, nomeProduto, precoUnitario, quantidade, " +
-                    "valorTotalProduto, situacao) values" + dados;
+                    "valorTotalProduto, situacao, foto) values" + dados;
                 MySqlCommand sql = new MySqlCommand(comando, conexao);
                 comando = "" + sql.ExecuteNonQuery();
                 MessageBox.Show("Linha(s) afetada(s)!");
@@ -84,6 +85,9 @@ namespace ProjetoMotorÉP
                 precoUnitario = Convert.ToDouble(txtbPreco.Text);
                 quantidade = Convert.ToInt32(txtbQtd.Text);
                 valorTotalProduto = Convert.ToDouble(txtbValorTotalProduto.Text);
+
+                imagem = txtbLocalFoto.Text;
+                imagem = imagem.Replace("\\", "\\\\");
 
                 if (Convert.ToString(cmbStatus.SelectedItem) == "Pendente")
                 {
@@ -142,6 +146,22 @@ namespace ProjetoMotorÉP
             }//fim da validação de campo nulo
 
             return false;
+        }
+
+        private void btnInserirImagem_Click(object sender, EventArgs e)
+        {
+            //Esssa classe abre o windows explorer para encontrar as imagens
+            OpenFileDialog dialog = new OpenFileDialog();
+            //Aqui é aplicado o filtro de busca no windows explorer
+            dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.PNG|AllFiles(*.*)|*.*";
+
+            //Quando o botão da caixa de diálogo "ok" do windows explorer for clicado os textboxes receberão as informações
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string foto = dialog.FileName.ToString();
+                txtbLocalFoto.Text = foto;
+                picbNota.ImageLocation = foto;
+            }
         }
     }//fim da classe
 }//fim do projeto
