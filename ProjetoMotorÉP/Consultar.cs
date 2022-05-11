@@ -112,6 +112,7 @@ namespace ProjetoMotorÉP
             {
                 validacao = 1;//variavel que habilita o funcionamento do botao "consulta"
 
+
                 CNPJ = txtbCNPJ.Text;
                 mes = Convert.ToString(cmbMes.SelectedItem);
                 ano = Convert.ToString(cmbAno.SelectedItem);
@@ -141,7 +142,6 @@ namespace ProjetoMotorÉP
         {
             if (validacao == 1)
             {
-
                 MessageBox.Show("Você tem certeza que deseja realizar essa operação?", "Aviso", MessageBoxButtons.YesNo);
 
                 var msg = MessageBox.Show("Você tem certeza que deseja realizar essa operação?", "Aviso", MessageBoxButtons.YesNo);

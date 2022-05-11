@@ -58,7 +58,7 @@ namespace ProjetoMotorÉP
             // lblConsultar
             // 
             this.lblConsultar.AutoSize = true;
-            this.lblConsultar.Location = new System.Drawing.Point(477, 29);
+            this.lblConsultar.Location = new System.Drawing.Point(477, 42);
             this.lblConsultar.Name = "lblConsultar";
             this.lblConsultar.Size = new System.Drawing.Size(51, 13);
             this.lblConsultar.TabIndex = 0;
