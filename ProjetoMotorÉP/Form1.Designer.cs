@@ -30,160 +30,138 @@ namespace ProjetoMotorÉP
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtbSenha = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Acessar = new System.Windows.Forms.Button();
+            this.txtbUsuario = new System.Windows.Forms.MaskedTextBox();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.lblCPF = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
             this.Criar = new System.Windows.Forms.Button();
             this.Esquecer = new System.Windows.Forms.Button();
-            this.txtbUsuario = new System.Windows.Forms.MaskedTextBox();
+            this.btnAcessar = new System.Windows.Forms.Button();
+            this.txtbSenha = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // txtbUsuario
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DimGray;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(83, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(338, 366);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
+            this.txtbUsuario.Location = new System.Drawing.Point(82, 202);
+            this.txtbUsuario.Mask = "000.000.000-00";
+            this.txtbUsuario.Name = "txtbUsuario";
+            this.txtbUsuario.Size = new System.Drawing.Size(288, 20);
+            this.txtbUsuario.TabIndex = 1;
             // 
-            // Label1
+            // lblLogin
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.BackColor = System.Drawing.Color.DimGray;
-            this.Label1.Font = new System.Drawing.Font("Romantic", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.Label1.Location = new System.Drawing.Point(177, 51);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(145, 58);
-            this.Label1.TabIndex = 1;
-            this.Label1.Text = "Login";
-            this.Label1.UseWaitCursor = true;
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.White;
+            this.lblLogin.Location = new System.Drawing.Point(179, 107);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(80, 31);
+            this.lblLogin.TabIndex = 11;
+            this.lblLogin.Text = "Login";
             // 
-            // label2
+            // lblCPF
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DimGray;
-            this.label2.Font = new System.Drawing.Font("Romantic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label2.Location = new System.Drawing.Point(112, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "CPF";
-            this.label2.UseWaitCursor = true;
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.ForeColor = System.Drawing.Color.White;
+            this.lblCPF.Location = new System.Drawing.Point(79, 181);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(38, 18);
+            this.lblCPF.TabIndex = 12;
+            this.lblCPF.Text = "CPF";
             // 
-            // label3
+            // lblSenha
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DimGray;
-            this.label3.Font = new System.Drawing.Font("Romantic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label3.Location = new System.Drawing.Point(112, 176);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Senha";
-            this.label3.UseWaitCursor = true;
-            // 
-            // txtbSenha
-            // 
-            this.txtbSenha.BackColor = System.Drawing.Color.Silver;
-            this.txtbSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbSenha.Font = new System.Drawing.Font("MS Outlook", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.txtbSenha.Location = new System.Drawing.Point(116, 203);
-            this.txtbSenha.MaxLength = 8;
-            this.txtbSenha.Name = "txtbSenha";
-            this.txtbSenha.Size = new System.Drawing.Size(279, 19);
-            this.txtbSenha.TabIndex = 5;
-            this.txtbSenha.UseWaitCursor = true;
-            this.txtbSenha.TextChanged += new System.EventHandler(this.textBoxSenha_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(104, 234);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(301, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "---------------------------------------------------------------------------------" +
-    "-----------------";
-            this.label4.UseWaitCursor = true;
-            // 
-            // Acessar
-            // 
-            this.Acessar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Acessar.Font = new System.Drawing.Font("Romantic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.Acessar.Location = new System.Drawing.Point(107, 260);
-            this.Acessar.Name = "Acessar";
-            this.Acessar.Size = new System.Drawing.Size(292, 34);
-            this.Acessar.TabIndex = 7;
-            this.Acessar.Text = "Acessar";
-            this.Acessar.UseVisualStyleBackColor = true;
-            this.Acessar.UseWaitCursor = true;
-            this.Acessar.Click += new System.EventHandler(this.Acessar_Click);
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.ForeColor = System.Drawing.Color.White;
+            this.lblSenha.Location = new System.Drawing.Point(79, 236);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(50, 18);
+            this.lblSenha.TabIndex = 13;
+            this.lblSenha.Text = "Senha";
             // 
             // Criar
             // 
+            this.Criar.BackColor = System.Drawing.Color.LightCyan;
             this.Criar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Criar.Font = new System.Drawing.Font("Romantic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.Criar.Location = new System.Drawing.Point(107, 300);
+            this.Criar.Location = new System.Drawing.Point(82, 409);
             this.Criar.Name = "Criar";
-            this.Criar.Size = new System.Drawing.Size(292, 34);
-            this.Criar.TabIndex = 8;
-            this.Criar.Text = "criar login";
-            this.Criar.UseVisualStyleBackColor = true;
-            this.Criar.UseWaitCursor = true;
+            this.Criar.Size = new System.Drawing.Size(141, 44);
+            this.Criar.TabIndex = 4;
+            this.Criar.Text = "Criar Login";
+            this.Criar.UseVisualStyleBackColor = false;
             this.Criar.Click += new System.EventHandler(this.Criar_Click);
             // 
             // Esquecer
             // 
+            this.Esquecer.BackColor = System.Drawing.Color.LightCyan;
             this.Esquecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Esquecer.Font = new System.Drawing.Font("Romantic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.Esquecer.Location = new System.Drawing.Point(107, 340);
+            this.Esquecer.Location = new System.Drawing.Point(229, 410);
             this.Esquecer.Name = "Esquecer";
-            this.Esquecer.Size = new System.Drawing.Size(292, 34);
-            this.Esquecer.TabIndex = 9;
-            this.Esquecer.Text = "esqueceu a senha?";
-            this.Esquecer.UseVisualStyleBackColor = true;
-            this.Esquecer.UseWaitCursor = true;
+            this.Esquecer.Size = new System.Drawing.Size(141, 43);
+            this.Esquecer.TabIndex = 5;
+            this.Esquecer.Text = "Esqueci a senha";
+            this.Esquecer.UseVisualStyleBackColor = false;
             this.Esquecer.Click += new System.EventHandler(this.Esquecer_Click);
             // 
-            // txtbUsuario
+            // btnAcessar
             // 
-            this.txtbUsuario.Location = new System.Drawing.Point(117, 155);
-            this.txtbUsuario.Mask = "000.000.000-00";
-            this.txtbUsuario.Name = "txtbUsuario";
-            this.txtbUsuario.Size = new System.Drawing.Size(278, 20);
-            this.txtbUsuario.TabIndex = 10;
+            this.btnAcessar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAcessar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnAcessar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnAcessar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcessar.Location = new System.Drawing.Point(82, 359);
+            this.btnAcessar.Name = "btnAcessar";
+            this.btnAcessar.Size = new System.Drawing.Size(288, 44);
+            this.btnAcessar.TabIndex = 3;
+            this.btnAcessar.Text = "Acessar";
+            this.btnAcessar.UseVisualStyleBackColor = false;
+            this.btnAcessar.Click += new System.EventHandler(this.btnAcessar_Click);
+            // 
+            // txtbSenha
+            // 
+            this.txtbSenha.Location = new System.Drawing.Point(82, 257);
+            this.txtbSenha.MaxLength = 8;
+            this.txtbSenha.Name = "txtbSenha";
+            this.txtbSenha.PasswordChar = '*';
+            this.txtbSenha.Size = new System.Drawing.Size(288, 20);
+            this.txtbSenha.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ProjetoMotorÉP.Properties.Resources.icons8_usuário_de_gênero_neutro_48;
+            this.pictureBox1.Location = new System.Drawing.Point(195, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProjetoMotorÉP.Properties.Resources.o_valle_del_bove_vale_grande_da_lava_do_deserto_no_flanco_oriental_do_vulcão_etna_66742224;
-            this.ClientSize = new System.Drawing.Size(513, 444);
-            this.Controls.Add(this.txtbUsuario);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(434, 561);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtbSenha);
+            this.Controls.Add(this.btnAcessar);
             this.Controls.Add(this.Esquecer);
             this.Controls.Add(this.Criar);
-            this.Controls.Add(this.Acessar);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtbSenha);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.Label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.lblCPF);
+            this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.txtbUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Login Vale";
-            this.UseWaitCursor = true;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,17 +169,15 @@ namespace ProjetoMotorÉP
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label Label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtbSenha;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Acessar;
+        private System.Windows.Forms.MaskedTextBox txtbUsuario;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Label lblCPF;
+        private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Button Criar;
         private System.Windows.Forms.Button Esquecer;
-        private System.Windows.Forms.MaskedTextBox txtbUsuario;
+        private System.Windows.Forms.Button btnAcessar;
+        private System.Windows.Forms.TextBox txtbSenha;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

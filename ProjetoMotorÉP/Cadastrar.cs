@@ -108,7 +108,7 @@ namespace ProjetoMotorÉP
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Hide();
             Menu mostrar = new Menu();
             mostrar.Show();
         }//fim do método voltar
@@ -120,7 +120,7 @@ namespace ProjetoMotorÉP
 
         private void btnVoltar_Click_1(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Hide();
             Menu mostrar = new Menu();
             mostrar.Show();
         }//fim do botão Voltar
@@ -154,6 +154,16 @@ namespace ProjetoMotorÉP
                 txtbLocalFoto.Text = foto;
                 picbNota.ImageLocation = foto;
             }
+        }//fim do botão inserir imagem
+
+        private void Cadastrar_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }//fim do botão encerrar
+
+        private void Cadastrar_Load(object sender, EventArgs e)
+        {
+
         }
     }//fim da classe
 }//fim do projeto

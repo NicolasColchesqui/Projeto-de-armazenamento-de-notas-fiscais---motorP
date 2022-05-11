@@ -55,6 +55,46 @@ namespace ProjetoMotorÉP
             }//fim do try catch
         }//fim do método cadastroLogin
 
+        private void btnCadastrarUsuario_Click(object sender, EventArgs e)
+        {
+            if (txtbSenha.Text == "" || txtbSenha2.Text == "" || txtbNome.Text == "" || mtbCPF.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos!");
+            }
+            else
+            {
+                this.mtbCPF.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;//Exclui a máscara antes de enviar ao banco
+                if (Convert.ToInt64(mtbCPF.Text) < 10000000000)
+                {
+                    MessageBox.Show("Preencha o campo CPF com todos os digitos!");
+                }
+                else
+                {
+                    if (txtbSenha.Text == txtbSenha2.Text)
+                    {
+                        CPF = Convert.ToInt64(this.mtbCPF.Text);
+                        CadastroLogin();
+                    }
+                    else
+                    {
+                        MessageBox.Show("As senhas não são iguais!");
+                    }
+                }//fim da validação de campo CPF incompleto            
+            }//fim da validação de campo vazio         
+        }//fim do botão cadastrar usuario
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 mostrar = new Form1();
+            mostrar.Show();
+        }//fim do botão login
+
+        private void CriarLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }//fim do método para encerrar o programa
+
         private void textBoxCriarUsuario_TextChanged(object sender, EventArgs e)
         {
 
@@ -83,37 +123,9 @@ namespace ProjetoMotorÉP
 
         }
 
-        private void btnCadastrarUsuario_Click(object sender, EventArgs e)
-        {           
-            if(txtbSenha.Text == "" || txtbSenha2.Text == "" || txtbNome.Text == "" || mtbCPF.Text == "")
-            {
-                MessageBox.Show("Preencha todos os campos!");                
-            }
-            else
-            {
-                if (txtbSenha.Text == txtbSenha.Text)
-                {
-                    this.mtbCPF.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals; //Exclui a máscara antes de enviar ao banco
-                    CPF = Convert.ToInt64(this.mtbCPF.Text);
-                    CadastroLogin();
-                }
-                else
-                {
-                    MessageBox.Show("As senhas não são iguais!");
-                }              
-            }           
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            Form1 mostrar = new Form1();
-            mostrar.Show();
-        }
-
         private void mtbCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
-    }
-}
+    }//fim da classe
+}//fim do projeto

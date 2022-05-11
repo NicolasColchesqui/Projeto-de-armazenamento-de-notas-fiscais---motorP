@@ -63,6 +63,16 @@ namespace ProjetoMotorÉP.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_usuário_de_gênero_neutro_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-usuário-de-gênero-neutro-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap o_valle_del_bove_vale_grande_da_lava_do_deserto_no_flanco_oriental_do_vulcão_etna_66742224 {
             get {
                 object obj = ResourceManager.GetObject("o-valle-del-bove-vale-grande-da-lava-do-deserto-no-flanco-oriental-do-vulcão-etna" +

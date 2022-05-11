@@ -133,7 +133,7 @@ namespace ProjetoMotorÉP
 
         private void btnVoltar_Click_1(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Hide();
             Menu mostrar = new Menu();
             mostrar.Show();
         }
@@ -207,16 +207,6 @@ namespace ProjetoMotorÉP
             }//fim da validação 
         }//fim do método deletar linha
 
-        private void btnDeletar_Click(object sender, EventArgs e)
-        {
-            Deletar();
-        }//fim do botão deletar
-
-        private void txtbTotal_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnVerNota_Click(object sender, EventArgs e)
         {
             codigo = txtbVerFoto.Text;
@@ -250,6 +240,21 @@ namespace ProjetoMotorÉP
                 MessageBox.Show("Algo de errado!\n\n" + erro);
             }
         }//fim do botão verNota
+
+        private void btnDeletar_Click_1(object sender, EventArgs e)
+        {
+            Deletar();
+        }//fim do botão deletar
+
+        private void Consultar_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }//fim do encerramento da aplicação
+
+        private void txtbTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void Consultar_Load(object sender, EventArgs e)
         {

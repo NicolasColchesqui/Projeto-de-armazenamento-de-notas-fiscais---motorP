@@ -19,16 +19,21 @@ namespace ProjetoMotorÉP
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Hide();
             Cadastrar mostrar = new Cadastrar();
             mostrar.Show();
         }//fim do botão cadastrar
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Hide();
             Consultar mostrar = new Consultar();
             mostrar.Show();
         }//fim do botão consultar
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }//fim da classe
 }//fim do projeto

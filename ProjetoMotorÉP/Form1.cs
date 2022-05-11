@@ -52,7 +52,7 @@ namespace ProjetoMotorÉP
                 {
                     this.Visible = false;
                     Menu mostrar = new Menu();
-                    mostrar.Show();
+                    mostrar.Show();                   
                 }
                 else
                 {
@@ -68,17 +68,19 @@ namespace ProjetoMotorÉP
             }//fim do try/catch
         }//fim do método de verificação
 
-        private void textBoxUsuario_TextChanged(object sender, EventArgs e)
+        private void Criar_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            CriarLogin mostrar = new CriarLogin();
+            mostrar.Show();
+        }//fim do botão criar login
 
-        }
-
-        private void textBoxSenha_TextChanged(object sender, EventArgs e)
+        private void Esquecer_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Contate o suporte", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }//fim do botão esqueci senha
 
-        }
-
-        private void Acessar_Click(object sender, EventArgs e)
+        private void btnAcessar_Click(object sender, EventArgs e)
         {
             if ((txtbUsuario.Text == "") || (txtbSenha.Text == ""))
             {
@@ -87,22 +89,29 @@ namespace ProjetoMotorÉP
             else
             {
                 this.txtbUsuario.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-                usuario = Convert.ToInt64(txtbUsuario.Text);
-                senha = txtbSenha.Text;
-                verificarAcesso();
-            }//fim da validação        
+
+                if (Convert.ToInt64(txtbUsuario.Text) < 10000000000)
+                {
+                    MessageBox.Show("Preencha o campo CPF com 11 digitos!");
+                }
+                else
+                {                  
+                    usuario = Convert.ToInt64(txtbUsuario.Text);
+                    senha = txtbSenha.Text;
+                    verificarAcesso();
+                }            
+            }//fim da validação 
         }//fim do botão acessar
 
-        private void Criar_Click(object sender, EventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Visible = false;
-            CriarLogin mostrar = new CriarLogin();
-            mostrar.Show();
+            Application.Exit();
+        }//fim do metodo de encerrar aplicação
+
+        private void textBoxUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
-        private void Esquecer_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Contate o suporte", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        }
-    }
-}
+    }//fim da classe
+}//fim do projeto

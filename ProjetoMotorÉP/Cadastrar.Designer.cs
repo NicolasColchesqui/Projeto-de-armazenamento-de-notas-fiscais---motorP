@@ -46,36 +46,45 @@ namespace ProjetoMotorÉP
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.lblSituacao = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.picbNota = new System.Windows.Forms.PictureBox();
             this.lblLocalFoto = new System.Windows.Forms.Label();
             this.txtbLocalFoto = new System.Windows.Forms.TextBox();
             this.btnInserirImagem = new System.Windows.Forms.Button();
+            this.picbNota = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picbNota)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(769, 459);
+            this.btnCadastrar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnCadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(795, 510);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(232, 64);
-            this.btnCadastrar.TabIndex = 0;
+            this.btnCadastrar.Size = new System.Drawing.Size(274, 99);
+            this.btnCadastrar.TabIndex = 10;
             this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // lblCadastrar
             // 
             this.lblCadastrar.AutoSize = true;
-            this.lblCadastrar.Location = new System.Drawing.Point(641, 35);
+            this.lblCadastrar.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastrar.ForeColor = System.Drawing.Color.White;
+            this.lblCadastrar.Location = new System.Drawing.Point(843, 32);
             this.lblCadastrar.Name = "lblCadastrar";
-            this.lblCadastrar.Size = new System.Drawing.Size(52, 13);
+            this.lblCadastrar.Size = new System.Drawing.Size(199, 31);
             this.lblCadastrar.TabIndex = 1;
-            this.lblCadastrar.Text = "Cadastrar";
+            this.lblCadastrar.Text = "Cadastrar Nota";
             // 
             // lblCNPJ
             // 
             this.lblCNPJ.AutoSize = true;
-            this.lblCNPJ.Location = new System.Drawing.Point(643, 121);
+            this.lblCNPJ.ForeColor = System.Drawing.Color.White;
+            this.lblCNPJ.Location = new System.Drawing.Point(642, 91);
             this.lblCNPJ.Name = "lblCNPJ";
             this.lblCNPJ.Size = new System.Drawing.Size(34, 13);
             this.lblCNPJ.TabIndex = 2;
@@ -83,33 +92,35 @@ namespace ProjetoMotorÉP
             // 
             // txtbCNPJ
             // 
-            this.txtbCNPJ.Location = new System.Drawing.Point(683, 122);
+            this.txtbCNPJ.Location = new System.Drawing.Point(682, 88);
             this.txtbCNPJ.MaxLength = 14;
             this.txtbCNPJ.Name = "txtbCNPJ";
-            this.txtbCNPJ.Size = new System.Drawing.Size(283, 20);
-            this.txtbCNPJ.TabIndex = 3;
+            this.txtbCNPJ.Size = new System.Drawing.Size(396, 20);
+            this.txtbCNPJ.TabIndex = 1;
             // 
             // lblFornecedor
             // 
             this.lblFornecedor.AutoSize = true;
-            this.lblFornecedor.Location = new System.Drawing.Point(645, 190);
+            this.lblFornecedor.ForeColor = System.Drawing.Color.White;
+            this.lblFornecedor.Location = new System.Drawing.Point(642, 122);
             this.lblFornecedor.Name = "lblFornecedor";
-            this.lblFornecedor.Size = new System.Drawing.Size(58, 13);
+            this.lblFornecedor.Size = new System.Drawing.Size(61, 13);
             this.lblFornecedor.TabIndex = 4;
-            this.lblFornecedor.Text = "fornecedor";
+            this.lblFornecedor.Text = "Fornecedor";
             // 
             // txtbFornecedor
             // 
-            this.txtbFornecedor.Location = new System.Drawing.Point(710, 190);
+            this.txtbFornecedor.Location = new System.Drawing.Point(709, 119);
             this.txtbFornecedor.MaxLength = 45;
             this.txtbFornecedor.Name = "txtbFornecedor";
-            this.txtbFornecedor.Size = new System.Drawing.Size(255, 20);
-            this.txtbFornecedor.TabIndex = 5;
+            this.txtbFornecedor.Size = new System.Drawing.Size(520, 20);
+            this.txtbFornecedor.TabIndex = 2;
             // 
             // lblDia
             // 
             this.lblDia.AutoSize = true;
-            this.lblDia.Location = new System.Drawing.Point(647, 228);
+            this.lblDia.ForeColor = System.Drawing.Color.White;
+            this.lblDia.Location = new System.Drawing.Point(1115, 64);
             this.lblDia.Name = "lblDia";
             this.lblDia.Size = new System.Drawing.Size(23, 13);
             this.lblDia.TabIndex = 6;
@@ -118,7 +129,8 @@ namespace ProjetoMotorÉP
             // lblMes
             // 
             this.lblMes.AutoSize = true;
-            this.lblMes.Location = new System.Drawing.Point(686, 228);
+            this.lblMes.ForeColor = System.Drawing.Color.White;
+            this.lblMes.Location = new System.Drawing.Point(1154, 64);
             this.lblMes.Name = "lblMes";
             this.lblMes.Size = new System.Drawing.Size(27, 13);
             this.lblMes.TabIndex = 7;
@@ -127,7 +139,8 @@ namespace ProjetoMotorÉP
             // lblAno
             // 
             this.lblAno.AutoSize = true;
-            this.lblAno.Location = new System.Drawing.Point(725, 229);
+            this.lblAno.ForeColor = System.Drawing.Color.White;
+            this.lblAno.Location = new System.Drawing.Point(1193, 65);
             this.lblAno.Name = "lblAno";
             this.lblAno.Size = new System.Drawing.Size(26, 13);
             this.lblAno.TabIndex = 8;
@@ -135,31 +148,33 @@ namespace ProjetoMotorÉP
             // 
             // txtbDia
             // 
-            this.txtbDia.Location = new System.Drawing.Point(648, 256);
+            this.txtbDia.Location = new System.Drawing.Point(1118, 88);
             this.txtbDia.MaxLength = 2;
             this.txtbDia.Name = "txtbDia";
             this.txtbDia.Size = new System.Drawing.Size(35, 20);
-            this.txtbDia.TabIndex = 9;
+            this.txtbDia.TabIndex = 4;
             // 
             // txtbMes
             // 
-            this.txtbMes.Location = new System.Drawing.Point(687, 256);
+            this.txtbMes.Location = new System.Drawing.Point(1157, 88);
             this.txtbMes.MaxLength = 2;
             this.txtbMes.Name = "txtbMes";
             this.txtbMes.Size = new System.Drawing.Size(35, 20);
-            this.txtbMes.TabIndex = 10;
+            this.txtbMes.TabIndex = 5;
             // 
             // txtbAno
             // 
-            this.txtbAno.Location = new System.Drawing.Point(726, 256);
+            this.txtbAno.Location = new System.Drawing.Point(1196, 88);
+            this.txtbAno.MaxLength = 4;
             this.txtbAno.Name = "txtbAno";
             this.txtbAno.Size = new System.Drawing.Size(35, 20);
-            this.txtbAno.TabIndex = 11;
+            this.txtbAno.TabIndex = 6;
             // 
             // lblValorTotalProduto
             // 
             this.lblValorTotalProduto.AutoSize = true;
-            this.lblValorTotalProduto.Location = new System.Drawing.Point(641, 151);
+            this.lblValorTotalProduto.ForeColor = System.Drawing.Color.White;
+            this.lblValorTotalProduto.Location = new System.Drawing.Point(642, 157);
             this.lblValorTotalProduto.Name = "lblValorTotalProduto";
             this.lblValorTotalProduto.Size = new System.Drawing.Size(98, 13);
             this.lblValorTotalProduto.TabIndex = 18;
@@ -167,10 +182,10 @@ namespace ProjetoMotorÉP
             // 
             // txtbValorTotalProduto
             // 
-            this.txtbValorTotalProduto.Location = new System.Drawing.Point(745, 148);
+            this.txtbValorTotalProduto.Location = new System.Drawing.Point(746, 150);
             this.txtbValorTotalProduto.Name = "txtbValorTotalProduto";
-            this.txtbValorTotalProduto.Size = new System.Drawing.Size(221, 20);
-            this.txtbValorTotalProduto.TabIndex = 19;
+            this.txtbValorTotalProduto.Size = new System.Drawing.Size(219, 20);
+            this.txtbValorTotalProduto.TabIndex = 3;
             // 
             // cmbStatus
             // 
@@ -179,15 +194,16 @@ namespace ProjetoMotorÉP
             this.cmbStatus.Items.AddRange(new object[] {
             "Pendente",
             "Pago"});
-            this.cmbStatus.Location = new System.Drawing.Point(844, 255);
+            this.cmbStatus.Location = new System.Drawing.Point(1108, 149);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(121, 21);
-            this.cmbStatus.TabIndex = 20;
+            this.cmbStatus.TabIndex = 7;
             // 
             // lblSituacao
             // 
             this.lblSituacao.AutoSize = true;
-            this.lblSituacao.Location = new System.Drawing.Point(789, 258);
+            this.lblSituacao.ForeColor = System.Drawing.Color.White;
+            this.lblSituacao.Location = new System.Drawing.Point(1053, 153);
             this.lblSituacao.Name = "lblSituacao";
             this.lblSituacao.Size = new System.Drawing.Size(49, 13);
             this.lblSituacao.TabIndex = 21;
@@ -195,27 +211,19 @@ namespace ProjetoMotorÉP
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(626, 500);
+            this.btnVoltar.Location = new System.Drawing.Point(615, 676);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltar.TabIndex = 25;
+            this.btnVoltar.TabIndex = 11;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
             // 
-            // picbNota
-            // 
-            this.picbNota.Location = new System.Drawing.Point(32, 12);
-            this.picbNota.Name = "picbNota";
-            this.picbNota.Size = new System.Drawing.Size(540, 533);
-            this.picbNota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picbNota.TabIndex = 26;
-            this.picbNota.TabStop = false;
-            // 
             // lblLocalFoto
             // 
             this.lblLocalFoto.AutoSize = true;
-            this.lblLocalFoto.Location = new System.Drawing.Point(647, 322);
+            this.lblLocalFoto.ForeColor = System.Drawing.Color.White;
+            this.lblLocalFoto.Location = new System.Drawing.Point(646, 266);
             this.lblLocalFoto.Name = "lblLocalFoto";
             this.lblLocalFoto.Size = new System.Drawing.Size(57, 13);
             this.lblLocalFoto.TabIndex = 27;
@@ -223,27 +231,42 @@ namespace ProjetoMotorÉP
             // 
             // txtbLocalFoto
             // 
-            this.txtbLocalFoto.Location = new System.Drawing.Point(650, 338);
+            this.txtbLocalFoto.Location = new System.Drawing.Point(709, 263);
             this.txtbLocalFoto.MaxLength = 100;
             this.txtbLocalFoto.Name = "txtbLocalFoto";
-            this.txtbLocalFoto.Size = new System.Drawing.Size(305, 20);
-            this.txtbLocalFoto.TabIndex = 28;
+            this.txtbLocalFoto.Size = new System.Drawing.Size(520, 20);
+            this.txtbLocalFoto.TabIndex = 8;
             // 
             // btnInserirImagem
             // 
-            this.btnInserirImagem.Location = new System.Drawing.Point(711, 364);
+            this.btnInserirImagem.BackColor = System.Drawing.Color.LightBlue;
+            this.btnInserirImagem.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnInserirImagem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnInserirImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInserirImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserirImagem.Location = new System.Drawing.Point(835, 289);
             this.btnInserirImagem.Name = "btnInserirImagem";
-            this.btnInserirImagem.Size = new System.Drawing.Size(183, 30);
-            this.btnInserirImagem.TabIndex = 29;
+            this.btnInserirImagem.Size = new System.Drawing.Size(194, 54);
+            this.btnInserirImagem.TabIndex = 9;
             this.btnInserirImagem.Text = "Inserir Imagem";
-            this.btnInserirImagem.UseVisualStyleBackColor = true;
+            this.btnInserirImagem.UseVisualStyleBackColor = false;
             this.btnInserirImagem.Click += new System.EventHandler(this.btnInserirImagem_Click);
+            // 
+            // picbNota
+            // 
+            this.picbNota.Location = new System.Drawing.Point(12, 12);
+            this.picbNota.Name = "picbNota";
+            this.picbNota.Size = new System.Drawing.Size(582, 687);
+            this.picbNota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picbNota.TabIndex = 26;
+            this.picbNota.TabStop = false;
             // 
             // Cadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 557);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(1269, 711);
             this.Controls.Add(this.btnInserirImagem);
             this.Controls.Add(this.txtbLocalFoto);
             this.Controls.Add(this.lblLocalFoto);
@@ -267,6 +290,8 @@ namespace ProjetoMotorÉP
             this.Controls.Add(this.btnCadastrar);
             this.Name = "Cadastrar";
             this.Text = "Cadastrar";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Cadastrar_FormClosing);
+            this.Load += new System.EventHandler(this.Cadastrar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbNota)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
