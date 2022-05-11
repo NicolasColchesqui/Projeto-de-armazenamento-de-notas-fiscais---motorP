@@ -84,11 +84,24 @@ namespace ProjetoMotorÉP
         }
 
         private void btnCadastrarUsuario_Click(object sender, EventArgs e)
-        {
-            this.mtbCPF.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals; //Exclui a máscara antes de enviar ao banco
-            CPF = Convert.ToInt64(this.mtbCPF.Text);
-            CadastroLogin();
-            mtbCPF.Clear();
+        {           
+            if(txtbSenha.Text == "" || txtbSenha2.Text == "" || txtbNome.Text == "" || mtbCPF.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos!");                
+            }
+            else
+            {
+                if (txtbSenha.Text == txtbSenha.Text)
+                {
+                    this.mtbCPF.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals; //Exclui a máscara antes de enviar ao banco
+                    CPF = Convert.ToInt64(this.mtbCPF.Text);
+                    CadastroLogin();
+                }
+                else
+                {
+                    MessageBox.Show("As senhas não são iguais!");
+                }              
+            }           
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -96,6 +109,11 @@ namespace ProjetoMotorÉP
             this.Visible = false;
             Form1 mostrar = new Form1();
             mostrar.Show();
+        }
+
+        private void mtbCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

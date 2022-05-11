@@ -80,6 +80,7 @@ namespace ProjetoMotorÉP
             this.txtbCNPJ.Name = "txtbCNPJ";
             this.txtbCNPJ.Size = new System.Drawing.Size(119, 20);
             this.txtbCNPJ.TabIndex = 2;
+            this.txtbCNPJ.TextChanged += new System.EventHandler(this.txtbCNPJ_TextChanged);
             // 
             // lblMes
             // 

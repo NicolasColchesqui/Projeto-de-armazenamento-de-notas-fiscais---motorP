@@ -86,6 +86,7 @@ namespace ProjetoMotorÉP
             }
             else
             {
+                this.txtbUsuario.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
                 usuario = Convert.ToInt64(txtbUsuario.Text);
                 senha = txtbSenha.Text;
                 verificarAcesso();
@@ -101,7 +102,7 @@ namespace ProjetoMotorÉP
 
         private void Esquecer_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Contate o suporte", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

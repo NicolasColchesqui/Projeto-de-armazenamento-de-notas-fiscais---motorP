@@ -33,13 +33,13 @@ namespace ProjetoMotorÉP
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtbUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtbSenha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Acessar = new System.Windows.Forms.Button();
             this.Criar = new System.Windows.Forms.Button();
             this.Esquecer = new System.Windows.Forms.Button();
+            this.txtbUsuario = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,18 +77,6 @@ namespace ProjetoMotorÉP
             this.label2.TabIndex = 2;
             this.label2.Text = "CPF";
             this.label2.UseWaitCursor = true;
-            // 
-            // txtbUsuario
-            // 
-            this.txtbUsuario.BackColor = System.Drawing.Color.Silver;
-            this.txtbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbUsuario.Location = new System.Drawing.Point(116, 153);
-            this.txtbUsuario.MaxLength = 11;
-            this.txtbUsuario.Name = "txtbUsuario";
-            this.txtbUsuario.Size = new System.Drawing.Size(279, 20);
-            this.txtbUsuario.TabIndex = 3;
-            this.txtbUsuario.UseWaitCursor = true;
-            this.txtbUsuario.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
             // 
             // label3
             // 
@@ -166,19 +154,27 @@ namespace ProjetoMotorÉP
             this.Esquecer.UseWaitCursor = true;
             this.Esquecer.Click += new System.EventHandler(this.Esquecer_Click);
             // 
+            // txtbUsuario
+            // 
+            this.txtbUsuario.Location = new System.Drawing.Point(117, 155);
+            this.txtbUsuario.Mask = "000.000.000-00";
+            this.txtbUsuario.Name = "txtbUsuario";
+            this.txtbUsuario.Size = new System.Drawing.Size(278, 20);
+            this.txtbUsuario.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoMotorÉP.Properties.Resources.o_valle_del_bove_vale_grande_da_lava_do_deserto_no_flanco_oriental_do_vulcão_etna_66742224;
             this.ClientSize = new System.Drawing.Size(513, 444);
+            this.Controls.Add(this.txtbUsuario);
             this.Controls.Add(this.Esquecer);
             this.Controls.Add(this.Criar);
             this.Controls.Add(this.Acessar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtbSenha);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtbUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.pictureBox1);
@@ -199,13 +195,13 @@ namespace ProjetoMotorÉP
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtbUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtbSenha;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Acessar;
         private System.Windows.Forms.Button Criar;
         private System.Windows.Forms.Button Esquecer;
+        private System.Windows.Forms.MaskedTextBox txtbUsuario;
     }
 }
 

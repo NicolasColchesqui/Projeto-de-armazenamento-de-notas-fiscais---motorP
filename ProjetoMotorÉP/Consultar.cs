@@ -66,8 +66,7 @@ namespace ProjetoMotorÉP
         {
             try
             {
-                string query = "select * from telaPrincipal where(CNPJ = " + CNPJ + ") and (mes = " + mes + ") and (ano = " + ano + ") and (situacao = " +
-                                situacao + ")";
+                string query = "select * from telaPrincipal where(CNPJ = " + CNPJ + ") and (mes = " + mes + ") and (ano = " + ano + ") and (situacao = " + situacao + ")";
 
                 MySqlCommand comando = new MySqlCommand(query, conexao);
 
@@ -105,7 +104,7 @@ namespace ProjetoMotorÉP
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (txtbCNPJ.Text == "")//impede o erro caso o campo esteja vazio
+            if (txtbCNPJ.Text == "" || cmbAno.SelectedItem == null || cmbMes.SelectedItem == null || cmbSituacao.SelectedItem == null)//impede o erro caso o campo esteja vazio
             {
                 MessageBox.Show("Preencha todos os campos para realizar a consulta!");
             }
@@ -253,6 +252,11 @@ namespace ProjetoMotorÉP
         }//fim do botão verNota
 
         private void Consultar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbCNPJ_TextChanged(object sender, EventArgs e)
         {
 
         }

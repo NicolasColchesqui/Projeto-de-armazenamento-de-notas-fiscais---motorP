@@ -34,7 +34,7 @@ namespace ProjetoMotorÉP
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBoxSenha2 = new System.Windows.Forms.TextBox();
+            this.txtbSenha2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtbSenha = new System.Windows.Forms.TextBox();
             this.SenhaIncorretaMessage = new System.Windows.Forms.Label();
@@ -92,16 +92,16 @@ namespace ProjetoMotorÉP
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBoxSenha2
+            // txtbSenha2
             // 
-            this.textBoxSenha2.BackColor = System.Drawing.Color.Silver;
-            this.textBoxSenha2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxSenha2.Font = new System.Drawing.Font("MS Outlook", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.textBoxSenha2.Location = new System.Drawing.Point(51, 373);
-            this.textBoxSenha2.Name = "textBoxSenha2";
-            this.textBoxSenha2.Size = new System.Drawing.Size(323, 19);
-            this.textBoxSenha2.TabIndex = 6;
-            this.textBoxSenha2.TextChanged += new System.EventHandler(this.textBoxSenha2_TextChanged);
+            this.txtbSenha2.BackColor = System.Drawing.Color.Silver;
+            this.txtbSenha2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbSenha2.Font = new System.Drawing.Font("MS Outlook", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.txtbSenha2.Location = new System.Drawing.Point(51, 373);
+            this.txtbSenha2.Name = "txtbSenha2";
+            this.txtbSenha2.Size = new System.Drawing.Size(323, 19);
+            this.txtbSenha2.TabIndex = 6;
+            this.txtbSenha2.TextChanged += new System.EventHandler(this.textBoxSenha2_TextChanged);
             // 
             // label4
             // 
@@ -194,6 +194,7 @@ namespace ProjetoMotorÉP
             this.mtbCPF.Name = "mtbCPF";
             this.mtbCPF.Size = new System.Drawing.Size(323, 20);
             this.mtbCPF.TabIndex = 15;
+            this.mtbCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCPF_MaskInputRejected);
             // 
             // btnCadastrarUsuario
             // 
@@ -231,7 +232,7 @@ namespace ProjetoMotorÉP
             this.Controls.Add(this.SenhaIncorretaMessage);
             this.Controls.Add(this.txtbSenha);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxSenha2);
+            this.Controls.Add(this.txtbSenha2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Label1);
@@ -254,7 +255,7 @@ namespace ProjetoMotorÉP
         private System.Windows.Forms.Label Label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxSenha2;
+        private System.Windows.Forms.TextBox txtbSenha2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtbSenha;
         private System.Windows.Forms.Label SenhaIncorretaMessage;
