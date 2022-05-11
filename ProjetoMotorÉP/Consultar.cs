@@ -23,6 +23,7 @@ namespace ProjetoMotorÉP
         public string codigo;
         public string CNPJ;
         public string mes;
+        public string ano;
         public byte situacao;
 
         public string foto;
@@ -42,14 +43,11 @@ namespace ProjetoMotorÉP
 
             //adiciona dentro do listBox as colunas com nomes, tamanhos e alinhamentos
             lsvConsultaDados.Columns.Add("codigo", 50, HorizontalAlignment.Left);
-            lsvConsultaDados.Columns.Add("CNPJ", 50, HorizontalAlignment.Left);
+            lsvConsultaDados.Columns.Add("CNPJ", 100, HorizontalAlignment.Left);
             lsvConsultaDados.Columns.Add("fornecedor", 100, HorizontalAlignment.Left);
             lsvConsultaDados.Columns.Add("dia", 50, HorizontalAlignment.Left);
             lsvConsultaDados.Columns.Add("mes", 50, HorizontalAlignment.Left);
             lsvConsultaDados.Columns.Add("ano", 50, HorizontalAlignment.Left);
-            lsvConsultaDados.Columns.Add("nomeProduto", 100, HorizontalAlignment.Left);
-            lsvConsultaDados.Columns.Add("precoUnitario", 100, HorizontalAlignment.Left);
-            lsvConsultaDados.Columns.Add("quantidade", 100, HorizontalAlignment.Left);
             lsvConsultaDados.Columns.Add("valorTotalProduto", 100, HorizontalAlignment.Left);
 
             conexao = new MySqlConnection("server=localhost;DataBase=notaConsumidor;Uid=root;password=;");
@@ -68,7 +66,7 @@ namespace ProjetoMotorÉP
         {
             try
             {
-                string query = "select * from telaPrincipal where(CNPJ = " + CNPJ + ") and (mes = " + mes + ") and (situacao = " +
+                string query = "select * from telaPrincipal where(CNPJ = " + CNPJ + ") and (mes = " + mes + ") and (ano = " + ano + ") and (situacao = " +
                                 situacao + ")";
 
                 MySqlCommand comando = new MySqlCommand(query, conexao);
@@ -88,9 +86,6 @@ namespace ProjetoMotorÉP
                         ler.GetString(4),
                         ler.GetString(5),
                         ler.GetString(6),
-                        ler.GetString(7),
-                        ler.GetString(8),
-                        ler.GetString(9),
                     };
 
                     var linha_view = new ListViewItem(linha);
@@ -116,10 +111,11 @@ namespace ProjetoMotorÉP
             }
             else
             {
-                validacao = 1;//variavel que habilita o funcionamento do botao "atualizar consulta"
+                validacao = 1;//variavel que habilita o funcionamento do botao "consulta"
 
                 CNPJ = txtbCNPJ.Text;
                 mes = Convert.ToString(cmbMes.SelectedItem);
+                ano = Convert.ToString(cmbAno.SelectedItem);
 
                 if (Convert.ToString(cmbSituacao.SelectedItem) == "Pendente")
                 {
@@ -134,11 +130,6 @@ namespace ProjetoMotorÉP
                 valorTotal();
             }//fim da validação consulta
         }//fim do botão Consultar 
-
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-    
-        }//fim do botão mostrar
 
         private void btnVoltar_Click_1(object sender, EventArgs e)
         {
@@ -259,6 +250,11 @@ namespace ProjetoMotorÉP
             {
                 MessageBox.Show("Algo de errado!\n\n" + erro);
             }
+        }//fim do botão verNota
+
+        private void Consultar_Load(object sender, EventArgs e)
+        {
+
         }
     }//fim da classe
 }//fim do projeto

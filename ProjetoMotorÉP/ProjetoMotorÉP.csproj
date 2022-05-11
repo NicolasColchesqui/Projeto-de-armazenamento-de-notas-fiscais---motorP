@@ -65,12 +65,6 @@
     <Compile Include="CriarLogin.Designer.cs">
       <DependentUpon>CriarLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="EsqueciMinhaSenha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EsqueciMinhaSenha.Designer.cs">
-      <DependentUpon>EsqueciMinhaSenha.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

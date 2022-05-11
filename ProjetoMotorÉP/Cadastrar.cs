@@ -53,9 +53,9 @@ namespace ProjetoMotorÉP
         {
             try
             {
-                dados = "('','" + CNPJ + "','" + fornecedor + "','" + dia + "','" + mes + "','" + ano + "','" + nomeProduto +
-                    "','" + precoUnitario + "','" + quantidade + "','" + valorTotalProduto + "','" + situacao + "','" + imagem + "')";
-                comando = "insert into telaPrincipal(codigo, CNPJ, fornecedor, dia, mes, ano, nomeProduto, precoUnitario, quantidade, " +
+                dados = "('','" + CNPJ + "','" + fornecedor + "','" + dia + "','" + mes + "','" + ano + "','" + 
+                    valorTotalProduto + "','" + situacao + "','" + imagem + "')";
+                comando = "insert into telaPrincipal(codigo, CNPJ, fornecedor, dia, mes, ano," +
                     "valorTotalProduto, situacao, foto) values" + dados;
                 MySqlCommand sql = new MySqlCommand(comando, conexao);
                 comando = "" + sql.ExecuteNonQuery();
@@ -81,9 +81,6 @@ namespace ProjetoMotorÉP
                 dia = txtbDia.Text;
                 mes = txtbMes.Text;
                 ano = txtbAno.Text;
-                nomeProduto = txtbProduto.Text;
-                precoUnitario = Convert.ToDouble(txtbPreco.Text);
-                quantidade = Convert.ToInt32(txtbQtd.Text);
                 valorTotalProduto = Convert.ToDouble(txtbValorTotalProduto.Text);
 
                 imagem = txtbLocalFoto.Text;
@@ -108,11 +105,6 @@ namespace ProjetoMotorÉP
         {
 
         }//fim do textbox CNPJ
-
-        private void lblconexao_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {

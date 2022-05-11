@@ -52,6 +52,7 @@ namespace ProjetoMotorÉP
             this.pictureBox1.Size = new System.Drawing.Size(338, 366);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.UseWaitCursor = true;
             // 
             // Label1
             // 
@@ -63,6 +64,7 @@ namespace ProjetoMotorÉP
             this.Label1.Size = new System.Drawing.Size(145, 58);
             this.Label1.TabIndex = 1;
             this.Label1.Text = "Login";
+            this.Label1.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -74,6 +76,7 @@ namespace ProjetoMotorÉP
             this.label2.Size = new System.Drawing.Size(53, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "CPF";
+            this.label2.UseWaitCursor = true;
             // 
             // txtbUsuario
             // 
@@ -84,6 +87,7 @@ namespace ProjetoMotorÉP
             this.txtbUsuario.Name = "txtbUsuario";
             this.txtbUsuario.Size = new System.Drawing.Size(279, 20);
             this.txtbUsuario.TabIndex = 3;
+            this.txtbUsuario.UseWaitCursor = true;
             this.txtbUsuario.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
             // 
             // label3
@@ -96,6 +100,7 @@ namespace ProjetoMotorÉP
             this.label3.Size = new System.Drawing.Size(68, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Senha";
+            this.label3.UseWaitCursor = true;
             // 
             // txtbSenha
             // 
@@ -107,6 +112,7 @@ namespace ProjetoMotorÉP
             this.txtbSenha.Name = "txtbSenha";
             this.txtbSenha.Size = new System.Drawing.Size(279, 19);
             this.txtbSenha.TabIndex = 5;
+            this.txtbSenha.UseWaitCursor = true;
             this.txtbSenha.TextChanged += new System.EventHandler(this.textBoxSenha_TextChanged);
             // 
             // label4
@@ -119,6 +125,7 @@ namespace ProjetoMotorÉP
             this.label4.TabIndex = 6;
             this.label4.Text = "---------------------------------------------------------------------------------" +
     "-----------------";
+            this.label4.UseWaitCursor = true;
             // 
             // Acessar
             // 
@@ -130,6 +137,7 @@ namespace ProjetoMotorÉP
             this.Acessar.TabIndex = 7;
             this.Acessar.Text = "Acessar";
             this.Acessar.UseVisualStyleBackColor = true;
+            this.Acessar.UseWaitCursor = true;
             this.Acessar.Click += new System.EventHandler(this.Acessar_Click);
             // 
             // Criar
@@ -142,6 +150,7 @@ namespace ProjetoMotorÉP
             this.Criar.TabIndex = 8;
             this.Criar.Text = "criar login";
             this.Criar.UseVisualStyleBackColor = true;
+            this.Criar.UseWaitCursor = true;
             this.Criar.Click += new System.EventHandler(this.Criar_Click);
             // 
             // Esquecer
@@ -154,6 +163,7 @@ namespace ProjetoMotorÉP
             this.Esquecer.TabIndex = 9;
             this.Esquecer.Text = "esqueceu a senha?";
             this.Esquecer.UseVisualStyleBackColor = true;
+            this.Esquecer.UseWaitCursor = true;
             this.Esquecer.Click += new System.EventHandler(this.Esquecer_Click);
             // 
             // Form1
@@ -177,6 +187,7 @@ namespace ProjetoMotorÉP
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Login Vale";
+            this.UseWaitCursor = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

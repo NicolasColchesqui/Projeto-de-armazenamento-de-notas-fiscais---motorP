@@ -48,13 +48,17 @@ namespace ProjetoMotorÉP
             this.lblVerFoto = new System.Windows.Forms.Label();
             this.txtbVerFoto = new System.Windows.Forms.TextBox();
             this.btnVerNota = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblAno = new System.Windows.Forms.Label();
+            this.cmbAno = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureNota)).BeginInit();
             this.SuspendLayout();
             // 
             // lblConsultar
             // 
             this.lblConsultar.AutoSize = true;
-            this.lblConsultar.Location = new System.Drawing.Point(41, 18);
+            this.lblConsultar.Location = new System.Drawing.Point(477, 29);
             this.lblConsultar.Name = "lblConsultar";
             this.lblConsultar.Size = new System.Drawing.Size(51, 13);
             this.lblConsultar.TabIndex = 0;
@@ -63,7 +67,7 @@ namespace ProjetoMotorÉP
             // lblCNPJ
             // 
             this.lblCNPJ.AutoSize = true;
-            this.lblCNPJ.Location = new System.Drawing.Point(30, 43);
+            this.lblCNPJ.Location = new System.Drawing.Point(477, 110);
             this.lblCNPJ.Name = "lblCNPJ";
             this.lblCNPJ.Size = new System.Drawing.Size(34, 13);
             this.lblCNPJ.TabIndex = 1;
@@ -71,15 +75,16 @@ namespace ProjetoMotorÉP
             // 
             // txtbCNPJ
             // 
-            this.txtbCNPJ.Location = new System.Drawing.Point(71, 43);
+            this.txtbCNPJ.Location = new System.Drawing.Point(517, 107);
+            this.txtbCNPJ.MaxLength = 14;
             this.txtbCNPJ.Name = "txtbCNPJ";
-            this.txtbCNPJ.Size = new System.Drawing.Size(212, 20);
+            this.txtbCNPJ.Size = new System.Drawing.Size(119, 20);
             this.txtbCNPJ.TabIndex = 2;
             // 
             // lblMes
             // 
             this.lblMes.AutoSize = true;
-            this.lblMes.Location = new System.Drawing.Point(485, 45);
+            this.lblMes.Location = new System.Drawing.Point(660, 109);
             this.lblMes.Name = "lblMes";
             this.lblMes.Size = new System.Drawing.Size(27, 13);
             this.lblMes.TabIndex = 3;
@@ -88,7 +93,7 @@ namespace ProjetoMotorÉP
             // lblSituacao
             // 
             this.lblSituacao.AutoSize = true;
-            this.lblSituacao.Location = new System.Drawing.Point(768, 43);
+            this.lblSituacao.Location = new System.Drawing.Point(848, 109);
             this.lblSituacao.Name = "lblSituacao";
             this.lblSituacao.Size = new System.Drawing.Size(49, 13);
             this.lblSituacao.TabIndex = 5;
@@ -96,17 +101,19 @@ namespace ProjetoMotorÉP
             // 
             // cmbSituacao
             // 
+            this.cmbSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSituacao.FormattingEnabled = true;
             this.cmbSituacao.Items.AddRange(new object[] {
             "Pendente",
             "Pago"});
-            this.cmbSituacao.Location = new System.Drawing.Point(823, 40);
+            this.cmbSituacao.Location = new System.Drawing.Point(903, 106);
             this.cmbSituacao.Name = "cmbSituacao";
             this.cmbSituacao.Size = new System.Drawing.Size(121, 21);
             this.cmbSituacao.TabIndex = 6;
             // 
             // cmbMes
             // 
+            this.cmbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMes.FormattingEnabled = true;
             this.cmbMes.Items.AddRange(new object[] {
             "01",
@@ -121,16 +128,16 @@ namespace ProjetoMotorÉP
             "10",
             "11",
             "12"});
-            this.cmbMes.Location = new System.Drawing.Point(518, 42);
+            this.cmbMes.Location = new System.Drawing.Point(693, 106);
             this.cmbMes.Name = "cmbMes";
-            this.cmbMes.Size = new System.Drawing.Size(121, 21);
+            this.cmbMes.Size = new System.Drawing.Size(36, 21);
             this.cmbMes.TabIndex = 7;
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(437, 94);
+            this.btnConsultar.Location = new System.Drawing.Point(540, 157);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultar.Size = new System.Drawing.Size(189, 56);
             this.btnConsultar.TabIndex = 8;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -139,15 +146,15 @@ namespace ProjetoMotorÉP
             // lsvConsultaDados
             // 
             this.lsvConsultaDados.HideSelection = false;
-            this.lsvConsultaDados.Location = new System.Drawing.Point(13, 123);
+            this.lsvConsultaDados.Location = new System.Drawing.Point(480, 238);
             this.lsvConsultaDados.Name = "lsvConsultaDados";
-            this.lsvConsultaDados.Size = new System.Drawing.Size(951, 109);
+            this.lsvConsultaDados.Size = new System.Drawing.Size(564, 109);
             this.lsvConsultaDados.TabIndex = 9;
             this.lsvConsultaDados.UseCompatibleStateImageBehavior = false;
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(12, 525);
+            this.btnVoltar.Location = new System.Drawing.Point(480, 525);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
             this.btnVoltar.TabIndex = 10;
@@ -157,9 +164,9 @@ namespace ProjetoMotorÉP
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(13, 238);
+            this.btnAtualizar.Location = new System.Drawing.Point(651, 416);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(199, 35);
+            this.btnAtualizar.Size = new System.Drawing.Size(228, 53);
             this.btnAtualizar.TabIndex = 11;
             this.btnAtualizar.Text = "Atualizar essa consulta";
             this.btnAtualizar.UseVisualStyleBackColor = true;
@@ -168,7 +175,7 @@ namespace ProjetoMotorÉP
             // txtbTotal
             // 
             this.txtbTotal.Enabled = false;
-            this.txtbTotal.Location = new System.Drawing.Point(594, 97);
+            this.txtbTotal.Location = new System.Drawing.Point(944, 184);
             this.txtbTotal.Name = "txtbTotal";
             this.txtbTotal.Size = new System.Drawing.Size(100, 20);
             this.txtbTotal.TabIndex = 12;
@@ -176,7 +183,7 @@ namespace ProjetoMotorÉP
             // 
             // txtbDeletar
             // 
-            this.txtbDeletar.Location = new System.Drawing.Point(717, 246);
+            this.txtbDeletar.Location = new System.Drawing.Point(851, 527);
             this.txtbDeletar.Name = "txtbDeletar";
             this.txtbDeletar.Size = new System.Drawing.Size(100, 20);
             this.txtbDeletar.TabIndex = 13;
@@ -184,15 +191,15 @@ namespace ProjetoMotorÉP
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(668, 249);
+            this.lblCodigo.Location = new System.Drawing.Point(636, 530);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(209, 13);
             this.lblCodigo.TabIndex = 14;
-            this.lblCodigo.Text = "Codigo:";
+            this.lblCodigo.Text = "Insira o código da linha que deseja deletar:";
             // 
             // btnDeletar
             // 
-            this.btnDeletar.Location = new System.Drawing.Point(852, 246);
+            this.btnDeletar.Location = new System.Drawing.Point(957, 524);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(75, 23);
             this.btnDeletar.TabIndex = 15;
@@ -202,16 +209,17 @@ namespace ProjetoMotorÉP
             // 
             // pictureNota
             // 
-            this.pictureNota.Location = new System.Drawing.Point(255, 238);
+            this.pictureNota.Location = new System.Drawing.Point(12, 12);
             this.pictureNota.Name = "pictureNota";
-            this.pictureNota.Size = new System.Drawing.Size(350, 310);
+            this.pictureNota.Size = new System.Drawing.Size(459, 547);
+            this.pictureNota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureNota.TabIndex = 16;
             this.pictureNota.TabStop = false;
             // 
             // lblVerFoto
             // 
             this.lblVerFoto.AutoSize = true;
-            this.lblVerFoto.Location = new System.Drawing.Point(626, 331);
+            this.lblVerFoto.Location = new System.Drawing.Point(570, 353);
             this.lblVerFoto.Name = "lblVerFoto";
             this.lblVerFoto.Size = new System.Drawing.Size(191, 13);
             this.lblVerFoto.TabIndex = 17;
@@ -219,26 +227,91 @@ namespace ProjetoMotorÉP
             // 
             // txtbVerFoto
             // 
-            this.txtbVerFoto.Location = new System.Drawing.Point(629, 348);
+            this.txtbVerFoto.Location = new System.Drawing.Point(767, 353);
             this.txtbVerFoto.Name = "txtbVerFoto";
             this.txtbVerFoto.Size = new System.Drawing.Size(100, 20);
             this.txtbVerFoto.TabIndex = 18;
             // 
             // btnVerNota
             // 
-            this.btnVerNota.Location = new System.Drawing.Point(717, 398);
+            this.btnVerNota.Location = new System.Drawing.Point(873, 351);
             this.btnVerNota.Name = "btnVerNota";
-            this.btnVerNota.Size = new System.Drawing.Size(126, 54);
+            this.btnVerNota.Size = new System.Drawing.Size(83, 22);
             this.btnVerNota.TabIndex = 19;
             this.btnVerNota.Text = "Ver nota";
             this.btnVerNota.UseVisualStyleBackColor = true;
             this.btnVerNota.Click += new System.EventHandler(this.btnVerNota_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(851, 187);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Valor Total Nota:";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(598, 472);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(325, 13);
+            this.lblStatus.TabIndex = 21;
+            this.lblStatus.Text = "Esse botão altera o status da consulta para pendente ou para pago";
+            // 
+            // lblAno
+            // 
+            this.lblAno.AutoSize = true;
+            this.lblAno.Location = new System.Drawing.Point(747, 110);
+            this.lblAno.Name = "lblAno";
+            this.lblAno.Size = new System.Drawing.Size(26, 13);
+            this.lblAno.TabIndex = 22;
+            this.lblAno.Text = "Ano";
+            // 
+            // cmbAno
+            // 
+            this.cmbAno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAno.FormattingEnabled = true;
+            this.cmbAno.Items.AddRange(new object[] {
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2028",
+            "2029",
+            "2030",
+            "2031",
+            "2032",
+            "2033",
+            "2034",
+            "2035",
+            "2036",
+            "2037",
+            "2038",
+            "2039",
+            "2040"});
+            this.cmbAno.Location = new System.Drawing.Point(779, 107);
+            this.cmbAno.Name = "cmbAno";
+            this.cmbAno.Size = new System.Drawing.Size(45, 21);
+            this.cmbAno.TabIndex = 23;
+            // 
             // Consultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 560);
+            this.ClientSize = new System.Drawing.Size(1056, 571);
+            this.Controls.Add(this.cmbAno);
+            this.Controls.Add(this.lblAno);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVerNota);
             this.Controls.Add(this.txtbVerFoto);
             this.Controls.Add(this.lblVerFoto);
@@ -260,6 +333,7 @@ namespace ProjetoMotorÉP
             this.Controls.Add(this.lblConsultar);
             this.Name = "Consultar";
             this.Text = "Consultar";
+            this.Load += new System.EventHandler(this.Consultar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureNota)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -287,5 +361,9 @@ namespace ProjetoMotorÉP
         private System.Windows.Forms.Label lblVerFoto;
         private System.Windows.Forms.TextBox txtbVerFoto;
         private System.Windows.Forms.Button btnVerNota;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblAno;
+        private System.Windows.Forms.ComboBox cmbAno;
     }
 }
