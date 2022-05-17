@@ -64,28 +64,28 @@ namespace ProjetoMotorÉP
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.ForeColor = System.Drawing.Color.White;
-            this.lblCPF.Location = new System.Drawing.Point(79, 181);
+            this.lblCPF.Location = new System.Drawing.Point(79, 175);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(38, 18);
+            this.lblCPF.Size = new System.Drawing.Size(50, 24);
             this.lblCPF.TabIndex = 12;
             this.lblCPF.Text = "CPF";
             // 
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.White;
-            this.lblSenha.Location = new System.Drawing.Point(79, 236);
+            this.lblSenha.Location = new System.Drawing.Point(78, 243);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(50, 18);
+            this.lblSenha.Size = new System.Drawing.Size(70, 24);
             this.lblSenha.TabIndex = 13;
             this.lblSenha.Text = "Senha";
             // 
             // Criar
             // 
-            this.Criar.BackColor = System.Drawing.Color.LightCyan;
+            this.Criar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(212)))));
             this.Criar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Criar.Location = new System.Drawing.Point(82, 409);
             this.Criar.Name = "Criar";
@@ -97,7 +97,7 @@ namespace ProjetoMotorÉP
             // 
             // Esquecer
             // 
-            this.Esquecer.BackColor = System.Drawing.Color.LightCyan;
+            this.Esquecer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(212)))));
             this.Esquecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Esquecer.Location = new System.Drawing.Point(229, 410);
             this.Esquecer.Name = "Esquecer";
@@ -109,7 +109,7 @@ namespace ProjetoMotorÉP
             // 
             // btnAcessar
             // 
-            this.btnAcessar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAcessar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(197)))), ((int)(((byte)(165)))));
             this.btnAcessar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btnAcessar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnAcessar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -123,7 +123,7 @@ namespace ProjetoMotorÉP
             // 
             // txtbSenha
             // 
-            this.txtbSenha.Location = new System.Drawing.Point(82, 257);
+            this.txtbSenha.Location = new System.Drawing.Point(82, 270);
             this.txtbSenha.MaxLength = 8;
             this.txtbSenha.Name = "txtbSenha";
             this.txtbSenha.PasswordChar = '*';
@@ -133,11 +133,11 @@ namespace ProjetoMotorÉP
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ProjetoMotorÉP.Properties.Resources.icons8_usuário_de_gênero_neutro_48;
-            this.pictureBox1.Location = new System.Drawing.Point(195, 36);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(195, 56);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
@@ -145,7 +145,7 @@ namespace ProjetoMotorÉP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(434, 561);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtbSenha);
@@ -158,9 +158,11 @@ namespace ProjetoMotorÉP
             this.Controls.Add(this.txtbUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(450, 600);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(450, 600);
             this.Name = "Form1";
-            this.Text = "Login Vale";
+            this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

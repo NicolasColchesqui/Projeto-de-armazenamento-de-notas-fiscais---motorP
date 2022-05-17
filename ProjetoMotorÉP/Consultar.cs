@@ -142,8 +142,6 @@ namespace ProjetoMotorÉP
         {
             if (validacao == 1)
             {
-                MessageBox.Show("Você tem certeza que deseja realizar essa operação?", "Aviso", MessageBoxButtons.YesNo);
-
                 var msg = MessageBox.Show("Você tem certeza que deseja realizar essa operação?", "Aviso", MessageBoxButtons.YesNo);
 
                 if (msg == DialogResult.Yes)
@@ -164,10 +162,13 @@ namespace ProjetoMotorÉP
                 {
                     Consultar mostrar = new Consultar();
                     mostrar.Show();
-                }//fim da ação que encerra o textbox
+                }//fim da ação que encerra o textbox               
             }//fim da condição necessária para atualizar o dado
 
+            lsvConsultaDados.Items.Clear();
+            txtbTotal.Text = "";
             validacao = 0;
+
         }//fim do botão atualizar
 
         private void valorTotal()//Joga a soma da coluna preço em um textBox

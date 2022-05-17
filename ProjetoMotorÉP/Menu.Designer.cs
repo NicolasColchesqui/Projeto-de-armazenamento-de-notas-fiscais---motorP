@@ -29,6 +29,7 @@ namespace ProjetoMotorÉP
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblFuncao = new System.Windows.Forms.Label();
@@ -36,9 +37,10 @@ namespace ProjetoMotorÉP
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(132)))));
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(92, 155);
+            this.btnCadastrar.Location = new System.Drawing.Point(92, 176);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(251, 93);
             this.btnCadastrar.TabIndex = 0;
@@ -48,9 +50,10 @@ namespace ProjetoMotorÉP
             // 
             // btnConsultar
             // 
-            this.btnConsultar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(132)))));
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.Location = new System.Drawing.Point(92, 276);
+            this.btnConsultar.Location = new System.Drawing.Point(92, 287);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(251, 96);
             this.btnConsultar.TabIndex = 1;
@@ -61,11 +64,11 @@ namespace ProjetoMotorÉP
             // lblFuncao
             // 
             this.lblFuncao.AutoSize = true;
-            this.lblFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFuncao.ForeColor = System.Drawing.Color.White;
-            this.lblFuncao.Location = new System.Drawing.Point(86, 50);
+            this.lblFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFuncao.ForeColor = System.Drawing.Color.Black;
+            this.lblFuncao.Location = new System.Drawing.Point(86, 69);
             this.lblFuncao.Name = "lblFuncao";
-            this.lblFuncao.Size = new System.Drawing.Size(259, 31);
+            this.lblFuncao.Size = new System.Drawing.Size(277, 31);
             this.lblFuncao.TabIndex = 2;
             this.lblFuncao.Text = "Escolha uma função";
             // 
@@ -73,11 +76,14 @@ namespace ProjetoMotorÉP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(434, 561);
             this.Controls.Add(this.lblFuncao);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(450, 600);
+            this.MinimumSize = new System.Drawing.Size(450, 600);
             this.Name = "Menu";
             this.Text = "Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);

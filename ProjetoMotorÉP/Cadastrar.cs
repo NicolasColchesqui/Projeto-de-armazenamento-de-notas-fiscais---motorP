@@ -165,5 +165,10 @@ namespace ProjetoMotorÉP
         {
 
         }
+
+        private void lblValorTotalProduto_Click(object sender, EventArgs e)
+        {
+
+        }
     }//fim da classe
 }//fim do projeto

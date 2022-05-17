@@ -29,6 +29,7 @@ namespace ProjetoMotorÉP
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consultar));
             this.lblConsultar = new System.Windows.Forms.Label();
             this.lblCNPJ = new System.Windows.Forms.Label();
             this.txtbCNPJ = new System.Windows.Forms.TextBox();
@@ -59,10 +60,11 @@ namespace ProjetoMotorÉP
             // 
             // lblConsultar
             // 
+            this.lblConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblConsultar.AutoSize = true;
             this.lblConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsultar.ForeColor = System.Drawing.Color.White;
-            this.lblConsultar.Location = new System.Drawing.Point(603, 12);
+            this.lblConsultar.ForeColor = System.Drawing.Color.Black;
+            this.lblConsultar.Location = new System.Drawing.Point(886, 12);
             this.lblConsultar.Name = "lblConsultar";
             this.lblConsultar.Size = new System.Drawing.Size(122, 31);
             this.lblConsultar.TabIndex = 0;
@@ -70,8 +72,9 @@ namespace ProjetoMotorÉP
             // 
             // lblCNPJ
             // 
+            this.lblCNPJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCNPJ.AutoSize = true;
-            this.lblCNPJ.ForeColor = System.Drawing.Color.White;
+            this.lblCNPJ.ForeColor = System.Drawing.Color.Black;
             this.lblCNPJ.Location = new System.Drawing.Point(606, 68);
             this.lblCNPJ.Name = "lblCNPJ";
             this.lblCNPJ.Size = new System.Drawing.Size(34, 13);
@@ -80,6 +83,7 @@ namespace ProjetoMotorÉP
             // 
             // txtbCNPJ
             // 
+            this.txtbCNPJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbCNPJ.Location = new System.Drawing.Point(646, 65);
             this.txtbCNPJ.MaxLength = 14;
             this.txtbCNPJ.Name = "txtbCNPJ";
@@ -89,8 +93,9 @@ namespace ProjetoMotorÉP
             // 
             // lblMes
             // 
+            this.lblMes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMes.AutoSize = true;
-            this.lblMes.ForeColor = System.Drawing.Color.White;
+            this.lblMes.ForeColor = System.Drawing.Color.Black;
             this.lblMes.Location = new System.Drawing.Point(813, 67);
             this.lblMes.Name = "lblMes";
             this.lblMes.Size = new System.Drawing.Size(27, 13);
@@ -99,8 +104,9 @@ namespace ProjetoMotorÉP
             // 
             // lblSituacao
             // 
+            this.lblSituacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSituacao.AutoSize = true;
-            this.lblSituacao.ForeColor = System.Drawing.Color.White;
+            this.lblSituacao.ForeColor = System.Drawing.Color.Black;
             this.lblSituacao.Location = new System.Drawing.Point(1070, 67);
             this.lblSituacao.Name = "lblSituacao";
             this.lblSituacao.Size = new System.Drawing.Size(49, 13);
@@ -109,6 +115,7 @@ namespace ProjetoMotorÉP
             // 
             // cmbSituacao
             // 
+            this.cmbSituacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSituacao.FormattingEnabled = true;
             this.cmbSituacao.Items.AddRange(new object[] {
@@ -121,6 +128,7 @@ namespace ProjetoMotorÉP
             // 
             // cmbMes
             // 
+            this.cmbMes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMes.FormattingEnabled = true;
             this.cmbMes.Items.AddRange(new object[] {
@@ -143,11 +151,13 @@ namespace ProjetoMotorÉP
             // 
             // btnConsultar
             // 
-            this.btnConsultar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
             this.btnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.Location = new System.Drawing.Point(646, 329);
+            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.Location = new System.Drawing.Point(648, 300);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(220, 60);
             this.btnConsultar.TabIndex = 5;
@@ -157,6 +167,7 @@ namespace ProjetoMotorÉP
             // 
             // lsvConsultaDados
             // 
+            this.lsvConsultaDados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvConsultaDados.HideSelection = false;
             this.lsvConsultaDados.Location = new System.Drawing.Point(609, 103);
             this.lsvConsultaDados.Name = "lsvConsultaDados";
@@ -166,19 +177,23 @@ namespace ProjetoMotorÉP
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(609, 676);
+            this.btnVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(212)))));
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Location = new System.Drawing.Point(605, 20);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
             this.btnVoltar.TabIndex = 10;
             this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
             // 
             // btnAtualizar
             // 
+            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtualizar.BackColor = System.Drawing.Color.LightBlue;
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(995, 329);
+            this.btnAtualizar.Location = new System.Drawing.Point(997, 300);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(220, 59);
             this.btnAtualizar.TabIndex = 8;
@@ -188,6 +203,7 @@ namespace ProjetoMotorÉP
             // 
             // txtbTotal
             // 
+            this.txtbTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbTotal.Enabled = false;
             this.txtbTotal.Location = new System.Drawing.Point(1125, 257);
             this.txtbTotal.Name = "txtbTotal";
@@ -197,19 +213,23 @@ namespace ProjetoMotorÉP
             // 
             // pictureNota
             // 
+            this.pictureNota.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureNota.Location = new System.Drawing.Point(12, 12);
             this.pictureNota.Name = "pictureNota";
-            this.pictureNota.Size = new System.Drawing.Size(570, 687);
+            this.pictureNota.Size = new System.Drawing.Size(570, 583);
             this.pictureNota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureNota.TabIndex = 16;
             this.pictureNota.TabStop = false;
             // 
             // lblVerFoto
             // 
+            this.lblVerFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVerFoto.AutoSize = true;
             this.lblVerFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVerFoto.ForeColor = System.Drawing.Color.White;
-            this.lblVerFoto.Location = new System.Drawing.Point(600, 503);
+            this.lblVerFoto.ForeColor = System.Drawing.Color.Black;
+            this.lblVerFoto.Location = new System.Drawing.Point(601, 442);
             this.lblVerFoto.Name = "lblVerFoto";
             this.lblVerFoto.Size = new System.Drawing.Size(281, 20);
             this.lblVerFoto.TabIndex = 17;
@@ -217,14 +237,16 @@ namespace ProjetoMotorÉP
             // 
             // txtbVerFoto
             // 
-            this.txtbVerFoto.Location = new System.Drawing.Point(891, 503);
+            this.txtbVerFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtbVerFoto.Location = new System.Drawing.Point(892, 442);
             this.txtbVerFoto.Name = "txtbVerFoto";
             this.txtbVerFoto.Size = new System.Drawing.Size(100, 20);
             this.txtbVerFoto.TabIndex = 6;
             // 
             // btnVerNota
             // 
-            this.btnVerNota.Location = new System.Drawing.Point(997, 503);
+            this.btnVerNota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVerNota.Location = new System.Drawing.Point(998, 442);
             this.btnVerNota.Name = "btnVerNota";
             this.btnVerNota.Size = new System.Drawing.Size(83, 22);
             this.btnVerNota.TabIndex = 7;
@@ -234,19 +256,22 @@ namespace ProjetoMotorÉP
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1032, 260);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(995, 258);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.Size = new System.Drawing.Size(126, 16);
             this.label1.TabIndex = 20;
             this.label1.Text = "Valor Total Nota:";
             // 
             // lblStatus
             // 
+            this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblStatus.AutoSize = true;
-            this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(938, 391);
+            this.lblStatus.ForeColor = System.Drawing.Color.Black;
+            this.lblStatus.Location = new System.Drawing.Point(940, 362);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(325, 13);
             this.lblStatus.TabIndex = 21;
@@ -254,8 +279,9 @@ namespace ProjetoMotorÉP
             // 
             // lblAno
             // 
+            this.lblAno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAno.AutoSize = true;
-            this.lblAno.ForeColor = System.Drawing.Color.White;
+            this.lblAno.ForeColor = System.Drawing.Color.Black;
             this.lblAno.Location = new System.Drawing.Point(930, 68);
             this.lblAno.Name = "lblAno";
             this.lblAno.Size = new System.Drawing.Size(26, 13);
@@ -264,6 +290,7 @@ namespace ProjetoMotorÉP
             // 
             // cmbAno
             // 
+            this.cmbAno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbAno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAno.FormattingEnabled = true;
             this.cmbAno.Items.AddRange(new object[] {
@@ -298,11 +325,12 @@ namespace ProjetoMotorÉP
             // 
             // lblVerNota
             // 
+            this.lblVerNota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVerNota.AutoSize = true;
             this.lblVerNota.BackColor = System.Drawing.Color.White;
             this.lblVerNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVerNota.ForeColor = System.Drawing.Color.Black;
-            this.lblVerNota.Location = new System.Drawing.Point(605, 472);
+            this.lblVerNota.Location = new System.Drawing.Point(606, 411);
             this.lblVerNota.Name = "lblVerNota";
             this.lblVerNota.Size = new System.Drawing.Size(81, 24);
             this.lblVerNota.TabIndex = 23;
@@ -310,10 +338,11 @@ namespace ProjetoMotorÉP
             // 
             // lblExcluir
             // 
+            this.lblExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExcluir.AutoSize = true;
             this.lblExcluir.BackColor = System.Drawing.Color.White;
             this.lblExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExcluir.Location = new System.Drawing.Point(605, 581);
+            this.lblExcluir.Location = new System.Drawing.Point(606, 504);
             this.lblExcluir.Name = "lblExcluir";
             this.lblExcluir.Size = new System.Drawing.Size(119, 24);
             this.lblExcluir.TabIndex = 32;
@@ -321,7 +350,8 @@ namespace ProjetoMotorÉP
             // 
             // btnDeletar
             // 
-            this.btnDeletar.Location = new System.Drawing.Point(1033, 605);
+            this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeletar.Location = new System.Drawing.Point(1034, 528);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(83, 23);
             this.btnDeletar.TabIndex = 31;
@@ -331,10 +361,11 @@ namespace ProjetoMotorÉP
             // 
             // lblCodigo
             // 
+            this.lblCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.ForeColor = System.Drawing.Color.White;
-            this.lblCodigo.Location = new System.Drawing.Point(600, 608);
+            this.lblCodigo.ForeColor = System.Drawing.Color.Black;
+            this.lblCodigo.Location = new System.Drawing.Point(601, 531);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(310, 20);
             this.lblCodigo.TabIndex = 30;
@@ -342,7 +373,8 @@ namespace ProjetoMotorÉP
             // 
             // txtbDeletar
             // 
-            this.txtbDeletar.Location = new System.Drawing.Point(927, 607);
+            this.txtbDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtbDeletar.Location = new System.Drawing.Point(928, 530);
             this.txtbDeletar.Name = "txtbDeletar";
             this.txtbDeletar.Size = new System.Drawing.Size(100, 20);
             this.txtbDeletar.TabIndex = 29;
@@ -351,8 +383,8 @@ namespace ProjetoMotorÉP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1269, 711);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1269, 621);
             this.Controls.Add(this.lblExcluir);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.lblCodigo);
@@ -378,6 +410,10 @@ namespace ProjetoMotorÉP
             this.Controls.Add(this.txtbCNPJ);
             this.Controls.Add(this.lblCNPJ);
             this.Controls.Add(this.lblConsultar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1285, 660);
             this.Name = "Consultar";
             this.Text = "Consultar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Consultar_FormClosing);

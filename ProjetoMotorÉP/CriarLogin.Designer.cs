@@ -81,7 +81,8 @@ namespace ProjetoMotorÉP
             // 
             // btnCadastrarUsuario
             // 
-            this.btnCadastrarUsuario.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCadastrarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(197)))), ((int)(((byte)(165)))));
+            this.btnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarUsuario.Location = new System.Drawing.Point(129, 409);
             this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
             this.btnCadastrarUsuario.Size = new System.Drawing.Size(175, 36);
@@ -92,7 +93,7 @@ namespace ProjetoMotorÉP
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.LightBlue;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(212)))));
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnLogin.Location = new System.Drawing.Point(282, 526);
             this.btnLogin.Name = "btnLogin";
@@ -116,50 +117,50 @@ namespace ProjetoMotorÉP
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.White;
-            this.lblNome.Location = new System.Drawing.Point(48, 169);
+            this.lblNome.Location = new System.Drawing.Point(47, 163);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(49, 18);
+            this.lblNome.Size = new System.Drawing.Size(66, 24);
             this.lblNome.TabIndex = 19;
             this.lblNome.Text = "Nome";
             // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.ForeColor = System.Drawing.Color.White;
-            this.lblCPF.Location = new System.Drawing.Point(48, 227);
+            this.lblCPF.Location = new System.Drawing.Point(48, 221);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(38, 18);
+            this.lblCPF.Size = new System.Drawing.Size(50, 24);
             this.lblCPF.TabIndex = 20;
             this.lblCPF.Text = "CPF";
             // 
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.White;
-            this.lblSenha.Location = new System.Drawing.Point(48, 283);
+            this.lblSenha.Location = new System.Drawing.Point(48, 277);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(50, 18);
+            this.lblSenha.Size = new System.Drawing.Size(70, 24);
             this.lblSenha.TabIndex = 21;
             this.lblSenha.Text = "Senha";
             // 
             // lblSenha2
             // 
             this.lblSenha2.AutoSize = true;
-            this.lblSenha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha2.ForeColor = System.Drawing.Color.White;
             this.lblSenha2.Location = new System.Drawing.Point(48, 335);
             this.lblSenha2.Name = "lblSenha2";
-            this.lblSenha2.Size = new System.Drawing.Size(178, 18);
+            this.lblSenha2.Size = new System.Drawing.Size(252, 24);
             this.lblSenha2.TabIndex = 22;
             this.lblSenha2.Text = "Digite a senha novamente";
             // 
             // txtbSenha2
             // 
-            this.txtbSenha2.Location = new System.Drawing.Point(51, 356);
+            this.txtbSenha2.Location = new System.Drawing.Point(51, 362);
             this.txtbSenha2.MaxLength = 8;
             this.txtbSenha2.Name = "txtbSenha2";
             this.txtbSenha2.PasswordChar = '*';
@@ -169,10 +170,11 @@ namespace ProjetoMotorÉP
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ProjetoMotorÉP.Properties.Resources.icons8_usuário_de_gênero_neutro_48;
-            this.pictureBox1.Location = new System.Drawing.Point(194, 41);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(191, 49);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
@@ -180,7 +182,7 @@ namespace ProjetoMotorÉP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(434, 561);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtbSenha2);
@@ -197,9 +199,11 @@ namespace ProjetoMotorÉP
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(450, 600);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(450, 600);
             this.Name = "CriarLogin";
-            this.Text = "CriarLogin";
+            this.Text = "Criar Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CriarLogin_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

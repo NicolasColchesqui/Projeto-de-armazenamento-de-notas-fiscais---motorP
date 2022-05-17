@@ -79,7 +79,13 @@ namespace ProjetoMotorÉP
                     {
                         MessageBox.Show("As senhas não são iguais!");
                     }
-                }//fim da validação de campo CPF incompleto            
+                }//fim da validação de campo CPF incompleto
+
+                txtbNome.Text = "";
+                mtbCPF.Text = "";
+                txtbSenha.Text = "";
+                txtbSenha2.Text = "";
+
             }//fim da validação de campo vazio         
         }//fim do botão cadastrar usuario
 
