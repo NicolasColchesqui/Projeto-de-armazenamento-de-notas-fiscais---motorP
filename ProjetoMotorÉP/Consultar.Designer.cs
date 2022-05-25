@@ -32,7 +32,6 @@ namespace ProjetoMotorÉP
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consultar));
             this.lblConsultar = new System.Windows.Forms.Label();
             this.lblCNPJ = new System.Windows.Forms.Label();
-            this.txtbCNPJ = new System.Windows.Forms.TextBox();
             this.lblMes = new System.Windows.Forms.Label();
             this.lblSituacao = new System.Windows.Forms.Label();
             this.cmbSituacao = new System.Windows.Forms.ComboBox();
@@ -55,6 +54,8 @@ namespace ProjetoMotorÉP
             this.btnDeletar = new System.Windows.Forms.Button();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtbDeletar = new System.Windows.Forms.TextBox();
+            this.txtbCNPJ = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureNota)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,16 +81,6 @@ namespace ProjetoMotorÉP
             this.lblCNPJ.Size = new System.Drawing.Size(34, 13);
             this.lblCNPJ.TabIndex = 1;
             this.lblCNPJ.Text = "CNPJ";
-            // 
-            // txtbCNPJ
-            // 
-            this.txtbCNPJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtbCNPJ.Location = new System.Drawing.Point(646, 65);
-            this.txtbCNPJ.MaxLength = 14;
-            this.txtbCNPJ.Name = "txtbCNPJ";
-            this.txtbCNPJ.Size = new System.Drawing.Size(119, 20);
-            this.txtbCNPJ.TabIndex = 1;
-            this.txtbCNPJ.TextChanged += new System.EventHandler(this.txtbCNPJ_TextChanged);
             // 
             // lblMes
             // 
@@ -379,12 +370,31 @@ namespace ProjetoMotorÉP
             this.txtbDeletar.Size = new System.Drawing.Size(100, 20);
             this.txtbDeletar.TabIndex = 29;
             // 
+            // txtbCNPJ
+            // 
+            this.txtbCNPJ.Location = new System.Drawing.Point(646, 65);
+            this.txtbCNPJ.Mask = "00.000.000/0000-00";
+            this.txtbCNPJ.Name = "txtbCNPJ";
+            this.txtbCNPJ.Size = new System.Drawing.Size(145, 20);
+            this.txtbCNPJ.TabIndex = 33;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(635, 473);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(233, 13);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Para saber o código realize uma consulta antes!";
+            // 
             // Consultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1269, 621);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtbCNPJ);
             this.Controls.Add(this.lblExcluir);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.lblCodigo);
@@ -407,7 +417,6 @@ namespace ProjetoMotorÉP
             this.Controls.Add(this.cmbSituacao);
             this.Controls.Add(this.lblSituacao);
             this.Controls.Add(this.lblMes);
-            this.Controls.Add(this.txtbCNPJ);
             this.Controls.Add(this.lblCNPJ);
             this.Controls.Add(this.lblConsultar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -427,7 +436,6 @@ namespace ProjetoMotorÉP
 
         private System.Windows.Forms.Label lblConsultar;
         private System.Windows.Forms.Label lblCNPJ;
-        private System.Windows.Forms.TextBox txtbCNPJ;
         private System.Windows.Forms.Label lblMes;
         private System.Windows.Forms.Label lblSituacao;
         private System.Windows.Forms.ComboBox cmbSituacao;
@@ -450,5 +458,7 @@ namespace ProjetoMotorÉP
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtbDeletar;
+        private System.Windows.Forms.MaskedTextBox txtbCNPJ;
+        private System.Windows.Forms.Label label2;
     }
 }

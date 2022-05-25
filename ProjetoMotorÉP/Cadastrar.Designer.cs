@@ -33,15 +33,11 @@ namespace ProjetoMotorÉP
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.lblCadastrar = new System.Windows.Forms.Label();
             this.lblCNPJ = new System.Windows.Forms.Label();
-            this.txtbCNPJ = new System.Windows.Forms.TextBox();
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.txtbFornecedor = new System.Windows.Forms.TextBox();
             this.lblDia = new System.Windows.Forms.Label();
             this.lblMes = new System.Windows.Forms.Label();
             this.lblAno = new System.Windows.Forms.Label();
-            this.txtbDia = new System.Windows.Forms.TextBox();
-            this.txtbMes = new System.Windows.Forms.TextBox();
-            this.txtbAno = new System.Windows.Forms.TextBox();
             this.lblValorTotalProduto = new System.Windows.Forms.Label();
             this.txtbValorTotalProduto = new System.Windows.Forms.TextBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
@@ -52,6 +48,10 @@ namespace ProjetoMotorÉP
             this.btnInserirImagem = new System.Windows.Forms.Button();
             this.picbNota = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtbDia = new System.Windows.Forms.ComboBox();
+            this.txtbMes = new System.Windows.Forms.ComboBox();
+            this.txtbAno = new System.Windows.Forms.ComboBox();
+            this.txtbCNPJ = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picbNota)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,15 +96,6 @@ namespace ProjetoMotorÉP
             this.lblCNPJ.TabIndex = 2;
             this.lblCNPJ.Text = "CNPJ";
             // 
-            // txtbCNPJ
-            // 
-            this.txtbCNPJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtbCNPJ.Location = new System.Drawing.Point(701, 87);
-            this.txtbCNPJ.MaxLength = 14;
-            this.txtbCNPJ.Name = "txtbCNPJ";
-            this.txtbCNPJ.Size = new System.Drawing.Size(396, 20);
-            this.txtbCNPJ.TabIndex = 1;
-            // 
             // lblFornecedor
             // 
             this.lblFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -130,7 +121,7 @@ namespace ProjetoMotorÉP
             this.lblDia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDia.AutoSize = true;
             this.lblDia.ForeColor = System.Drawing.Color.Black;
-            this.lblDia.Location = new System.Drawing.Point(1134, 63);
+            this.lblDia.Location = new System.Drawing.Point(1101, 63);
             this.lblDia.Name = "lblDia";
             this.lblDia.Size = new System.Drawing.Size(23, 13);
             this.lblDia.TabIndex = 6;
@@ -141,7 +132,7 @@ namespace ProjetoMotorÉP
             this.lblMes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMes.AutoSize = true;
             this.lblMes.ForeColor = System.Drawing.Color.Black;
-            this.lblMes.Location = new System.Drawing.Point(1173, 63);
+            this.lblMes.Location = new System.Drawing.Point(1152, 63);
             this.lblMes.Name = "lblMes";
             this.lblMes.Size = new System.Drawing.Size(27, 13);
             this.lblMes.TabIndex = 7;
@@ -152,38 +143,11 @@ namespace ProjetoMotorÉP
             this.lblAno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAno.AutoSize = true;
             this.lblAno.ForeColor = System.Drawing.Color.Black;
-            this.lblAno.Location = new System.Drawing.Point(1212, 64);
+            this.lblAno.Location = new System.Drawing.Point(1200, 63);
             this.lblAno.Name = "lblAno";
             this.lblAno.Size = new System.Drawing.Size(26, 13);
             this.lblAno.TabIndex = 8;
             this.lblAno.Text = "Ano";
-            // 
-            // txtbDia
-            // 
-            this.txtbDia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtbDia.Location = new System.Drawing.Point(1135, 87);
-            this.txtbDia.MaxLength = 2;
-            this.txtbDia.Name = "txtbDia";
-            this.txtbDia.Size = new System.Drawing.Size(35, 20);
-            this.txtbDia.TabIndex = 4;
-            // 
-            // txtbMes
-            // 
-            this.txtbMes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtbMes.Location = new System.Drawing.Point(1176, 87);
-            this.txtbMes.MaxLength = 2;
-            this.txtbMes.Name = "txtbMes";
-            this.txtbMes.Size = new System.Drawing.Size(35, 20);
-            this.txtbMes.TabIndex = 5;
-            // 
-            // txtbAno
-            // 
-            this.txtbAno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtbAno.Location = new System.Drawing.Point(1215, 87);
-            this.txtbAno.MaxLength = 4;
-            this.txtbAno.Name = "txtbAno";
-            this.txtbAno.Size = new System.Drawing.Size(35, 20);
-            this.txtbAno.TabIndex = 6;
             // 
             // lblValorTotalProduto
             // 
@@ -302,27 +266,132 @@ namespace ProjetoMotorÉP
             this.panel1.Size = new System.Drawing.Size(0, 0);
             this.panel1.TabIndex = 28;
             // 
+            // txtbDia
+            // 
+            this.txtbDia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtbDia.FormattingEnabled = true;
+            this.txtbDia.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.txtbDia.Location = new System.Drawing.Point(1104, 87);
+            this.txtbDia.Name = "txtbDia";
+            this.txtbDia.Size = new System.Drawing.Size(43, 21);
+            this.txtbDia.TabIndex = 29;
+            // 
+            // txtbMes
+            // 
+            this.txtbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtbMes.FormattingEnabled = true;
+            this.txtbMes.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
+            this.txtbMes.Location = new System.Drawing.Point(1155, 87);
+            this.txtbMes.Name = "txtbMes";
+            this.txtbMes.Size = new System.Drawing.Size(39, 21);
+            this.txtbMes.TabIndex = 30;
+            // 
+            // txtbAno
+            // 
+            this.txtbAno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtbAno.FormattingEnabled = true;
+            this.txtbAno.Items.AddRange(new object[] {
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2028",
+            "2029",
+            "2030",
+            "2031",
+            "2032",
+            "2033",
+            "2034",
+            "2035",
+            "2036",
+            "2037",
+            "2038",
+            "2039",
+            "2040"});
+            this.txtbAno.Location = new System.Drawing.Point(1201, 87);
+            this.txtbAno.Name = "txtbAno";
+            this.txtbAno.Size = new System.Drawing.Size(47, 21);
+            this.txtbAno.TabIndex = 31;
+            // 
+            // txtbCNPJ
+            // 
+            this.txtbCNPJ.Location = new System.Drawing.Point(702, 87);
+            this.txtbCNPJ.Mask = "00.000.000/0000-00";
+            this.txtbCNPJ.Name = "txtbCNPJ";
+            this.txtbCNPJ.Size = new System.Drawing.Size(359, 20);
+            this.txtbCNPJ.TabIndex = 32;
+            // 
             // Cadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1264, 621);
+            this.Controls.Add(this.txtbCNPJ);
+            this.Controls.Add(this.txtbAno);
+            this.Controls.Add(this.txtbMes);
+            this.Controls.Add(this.txtbDia);
             this.Controls.Add(this.picbNota);
             this.Controls.Add(this.lblCadastrar);
             this.Controls.Add(this.btnInserirImagem);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.txtbMes);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.txtbDia);
             this.Controls.Add(this.txtbLocalFoto);
-            this.Controls.Add(this.txtbAno);
             this.Controls.Add(this.lblCNPJ);
             this.Controls.Add(this.lblAno);
             this.Controls.Add(this.lblLocalFoto);
             this.Controls.Add(this.lblValorTotalProduto);
-            this.Controls.Add(this.txtbCNPJ);
             this.Controls.Add(this.lblMes);
             this.Controls.Add(this.lblFornecedor);
             this.Controls.Add(this.txtbValorTotalProduto);
@@ -349,15 +418,11 @@ namespace ProjetoMotorÉP
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lblCadastrar;
         private System.Windows.Forms.Label lblCNPJ;
-        private System.Windows.Forms.TextBox txtbCNPJ;
         private System.Windows.Forms.Label lblFornecedor;
         private System.Windows.Forms.TextBox txtbFornecedor;
         private System.Windows.Forms.Label lblDia;
         private System.Windows.Forms.Label lblMes;
         private System.Windows.Forms.Label lblAno;
-        private System.Windows.Forms.TextBox txtbDia;
-        private System.Windows.Forms.TextBox txtbMes;
-        private System.Windows.Forms.TextBox txtbAno;
         private System.Windows.Forms.Label lblValorTotalProduto;
         private System.Windows.Forms.TextBox txtbValorTotalProduto;
         private System.Windows.Forms.ComboBox cmbStatus;
@@ -368,5 +433,9 @@ namespace ProjetoMotorÉP
         private System.Windows.Forms.Button btnInserirImagem;
         private System.Windows.Forms.PictureBox picbNota;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox txtbDia;
+        private System.Windows.Forms.ComboBox txtbMes;
+        private System.Windows.Forms.ComboBox txtbAno;
+        private System.Windows.Forms.MaskedTextBox txtbCNPJ;
     }
 }

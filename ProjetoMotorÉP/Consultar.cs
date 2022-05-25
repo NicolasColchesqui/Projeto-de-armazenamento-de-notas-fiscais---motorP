@@ -90,7 +90,14 @@ namespace ProjetoMotorÉP
                     var linha_view = new ListViewItem(linha);
 
                     lsvConsultaDados.Items.Add(linha_view);
-                }//fim do while          
+
+                }//fim do while
+                
+                //NOVA ADIÇÃO
+                if (!ler.HasRows)
+                {
+                    MessageBox.Show("A consulta não retornou resultados!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
 
                 ler.Close();
 
@@ -112,6 +119,8 @@ namespace ProjetoMotorÉP
             {
                 validacao = 1;//variavel que habilita o funcionamento do botao "consulta"
 
+                //NOVA ADIÇÃO
+                this.txtbCNPJ.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
                 CNPJ = txtbCNPJ.Text;
                 mes = Convert.ToString(cmbMes.SelectedItem);
@@ -156,10 +165,20 @@ namespace ProjetoMotorÉP
                         MySqlCommand atual = new MySqlCommand(atualizacao, conexao);
                         atualizacao = "" + atual.ExecuteNonQuery();
                         MessageBox.Show("Nota atualizada!");
-                    }//fim da atualização
+                    }//fim da atualização para pago
+
+                    if (Convert.ToString(cmbSituacao.SelectedItem) == "Pago")
+                    {
+                        atualizacao = "update telaPrincipal set situacao = '1' where (CNPJ = " + CNPJ + ") and (mes =" + mes +
+                                        ") and (situacao =" + situacao + ")";
+                        MySqlCommand atual = new MySqlCommand(atualizacao, conexao);
+                        atualizacao = "" + atual.ExecuteNonQuery();
+                        MessageBox.Show("Nota atualizada!");
+                    }//fim da atualização para pendente
                 }//fim da ação de atualização em caso positivo
                 if (msg == DialogResult.No)
                 {
+                    this.Hide();
                     Consultar mostrar = new Consultar();
                     mostrar.Show();
                 }//fim da ação que encerra o textbox               

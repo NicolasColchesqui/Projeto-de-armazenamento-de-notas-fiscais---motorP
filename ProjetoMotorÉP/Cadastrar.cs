@@ -76,6 +76,9 @@ namespace ProjetoMotorÉP
             }
             else
             {
+                //NOVA ADIÇÃO
+                this.txtbCNPJ.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+
                 CNPJ = txtbCNPJ.Text;
                 fornecedor = txtbFornecedor.Text;
                 dia = txtbDia.Text;
@@ -86,18 +89,33 @@ namespace ProjetoMotorÉP
                 imagem = txtbLocalFoto.Text;
                 imagem = imagem.Replace("\\", "\\\\");
 
-                if (Convert.ToString(cmbStatus.SelectedItem) == "Pendente")
+                //NOVA ADIÇÃO
+
+                if (Convert.ToInt64(txtbCNPJ.Text) < 10000000000000)
                 {
-                    situacao = 1; //coluna situacao vai receber 1 para valor que ainda será pago
+                    MessageBox.Show("O campo CNPJ precisa estar com 14 dígitos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    situacao = 0; //coluna situacao vai receber 0 para valor já pago
-                }
+                    if (cmbStatus.SelectedItem == null || txtbCNPJ.Text == null)
+                    {
+                        MessageBox.Show("Escolha uma opção válida para a opção Status!");
+                    }
+                    else
+                    {
+                        if (Convert.ToString(cmbStatus.SelectedItem) == "Pendente")
+                        {
+                            situacao = 1; //coluna situacao vai receber 1 para valor que ainda será pago
+                        }
+                        else
+                        {
+                            situacao = 0; //coluna situacao vai receber 0 para valor já pago
+                        }
 
-                Inserir();
-            }
-
+                        Inserir();
+                    }//fim de validação 
+                }//fim da segunda validação                     
+            }//fim da condição
         }//fim do botão cadastrar
 
 
