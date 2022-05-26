@@ -51,7 +51,7 @@ namespace ProjetoMotorÉP
             }
             catch (Exception e)
             {
-                MessageBox.Show("Algo deu errado!" + e);
+                MessageBox.Show("Algo deu errado" + e);
             }//fim do try catch
         }//fim do método cadastroLogin
 
@@ -73,7 +73,7 @@ namespace ProjetoMotorÉP
                     if (txtbSenha.Text == txtbSenha2.Text)
                     {
                         CPF = Convert.ToInt64(this.mtbCPF.Text);
-                        CadastroLogin();
+                        verificarCPF();
                     }
                     else
                     {
@@ -96,6 +96,31 @@ namespace ProjetoMotorÉP
             mostrar.Show();
         }//fim do botão login
 
+        //NOVA ENTRADA
+        private void verificarCPF()
+        {
+            try
+            {
+                string query = "select * from login where(CPF = " + CPF + ")";
+
+                MySqlCommand comando = new MySqlCommand(query, conexao);
+
+                MySqlDataReader ler = comando.ExecuteReader();
+
+                if (ler.HasRows)
+                {
+                    MessageBox.Show("O CPF já está cadastrado no sistema!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    CadastroLogin();
+                }
+            }//fim do try
+            catch (Exception e)
+            {
+                MessageBox.Show("Algo deu errado!" + e);
+            }//fim do catch
+        }//fim do verificarCPF
         private void CriarLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -133,5 +158,13 @@ namespace ProjetoMotorÉP
         {
 
         }
+        //NOVA ENTRADA impede o usuário de coloca números no campo nome
+        private void txtbNome_KeyPress(object sender, KeyPressEventArgs num)
+        {
+            if (char.IsDigit(num.KeyChar))
+            {
+                num.Handled = true;
+            }
+        }//fim do evento KeyPress para o textbox nome
     }//fim da classe
 }//fim do projeto

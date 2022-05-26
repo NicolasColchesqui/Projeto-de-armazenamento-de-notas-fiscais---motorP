@@ -69,6 +69,7 @@ namespace ProjetoMotorÉP
             this.txtbNome.Size = new System.Drawing.Size(323, 20);
             this.txtbNome.TabIndex = 1;
             this.txtbNome.TextChanged += new System.EventHandler(this.txtbNome_TextChanged);
+            this.txtbNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbNome_KeyPress);
             // 
             // mtbCPF
             // 

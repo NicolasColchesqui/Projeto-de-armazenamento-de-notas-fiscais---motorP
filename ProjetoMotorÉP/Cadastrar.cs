@@ -99,7 +99,7 @@ namespace ProjetoMotorÉP
                 {
                     if (cmbStatus.SelectedItem == null || txtbCNPJ.Text == null)
                     {
-                        MessageBox.Show("Escolha uma opção válida para a opção Status!");
+                        MessageBox.Show("Escolha uma opção válida para o campo Situação!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
